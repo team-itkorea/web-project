@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;400&display=swap');
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inside {
+    max-width: 500px;
+    margin: 0px auto;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.essential {
+    color: red;
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    font-family: 'Nanum Gothic', sans-serif;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 30px;
+}
+
+.all-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.all-checkbox-text {
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.text-line {
+    margin-bottom: 15px;
+    display: flex;
+    cursor: pointer;
+}
+
+.all-checkbox-text1 {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 5px;
+    margin-right: 7px;
+}
+
+.agreement-box {
+    width: 500px;
+    height: 150px;
+    border: 0.1px solid;
+    overflow: auto;
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    border: 1px solid #a4a4a4;
+}
+
+.signup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancellation{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 4px;
+    border: 1px solid #a4a4a4;
+}
+
+.siginup {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: white;
+    margin-right: 10px;
+    border: 1px solid #454545;
+}
+
+.line {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    border-top: 1px dotted rgba(75, 75, 75, 0.3);
+}

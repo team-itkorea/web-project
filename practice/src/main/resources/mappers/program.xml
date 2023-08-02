@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.example.practice.admin.AdminRepository">
+	<insert id="addProgram" parameterType="com.example.practice.admin.Program">
+		INSERT INTO
+  			program
+	  	VALUES(
+	  		0,
+	  		#{program_theme},
+	  		#{program_title},
+	  		#{program_price},
+	  		#{program_info},
+	  		#{program_place},
+	  		#{program_schedule},
+	  		#{program_time},
+	  		#{program_participants},
+	  		#{program_option},
+	  		#{program_like},
+			#{program_imgUrl_1},
+			#{program_imgUrl_2},
+	  		now(),
+	  		now()
+	  	)
+	</insert>
+</mapper>
