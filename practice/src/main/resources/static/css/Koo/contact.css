@@ -225,7 +225,7 @@
     margin: 18px 0px 0px 5px;
 }
 
-.doinquiry {
+/* .doinquiry {
     border: 1px solid;
     border-radius: 22px 22px 22px 22px;
     margin: 0px 0px 10px 0px;
@@ -235,13 +235,26 @@
     height: 22px;
     transition: background-color 0.8s ease;
     cursor: pointer;
+} */
+
+.doinquiry button {
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 21px 21px 21px 21px;
+    background-color: #ffffff;
+    width: 794px;
+    height: 42px;
+    transition: background-color 0.8s ease;
+    cursor: pointer;
 }
 
-.doinquiry:hover {
+.doinquiry button:hover {
     background-color: #222222;
     color: white;
 }
 
-.doinquiry:hover a {
+.doinquiry:hover button {
+    border: 0px solid;
+    background-color: #222222;
     color: #ffffff;
 }

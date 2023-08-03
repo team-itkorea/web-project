@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
     <link rel="stylesheet" href="/static/css/koo/font.css">
-    <link rel="stylesheet" href="/static/css/koo/contact.css">
     <link rel="stylesheet" href="/static/css/koo/main-header.css">
+    <link rel="stylesheet" href="/static/css/Koo/contact.css">
     <link rel="stylesheet" href="/static/css/koo/footer.css">
     <script src="https://kit.fontawesome.com/7664657868.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -56,7 +57,6 @@
                     </div>
                     <div class="block"></div>
                     <div class="block2">
-                        <form action="">
                             <div class="visible-box">
                                 <div>
                                     <label class="red-3">
@@ -66,38 +66,38 @@
                                     <div class="inquiry-box">
                                         <div class="contact-font2">
                                             <label>
-                                                <input type="radio" name="btn1" class="radio">
+                                                <input type="radio" name="contact_category" class="radio" value="일상과 여행 사이 프로그램 관련 문의">
                                                 <span>일상과 여행 사이 프로그램 관련 문의</span>
                                             </label>
                                         </div>
                                         <div class="contact-font2">
                                             <label>
-                                                <input type="radio" name="btn1" class="radio">
+                                                <input type="radio" name="contact_category" class="radio" value="일상과 여행 사이 입점 문의">
                                                 <span>일상과 여행 사이 입점 문의</span>
                                             </label>
                                         </div>
                                         <div class="contact-font2">
                                             <label>
-                                                <input type="radio" name="btn1" class="radio">
+                                                <input type="radio" name="contact_category" class="radio" value="크리에이터 협업 문의">
                                                 <span>크리에이터 협업 문의</span>
                                             </label>
                                         </div>
                                         <div class="contact-font2">
                                             <label>
-                                                <input type="radio" name="btn1" class="radio">
+                                                <input type="radio" name="contact_category" class="radio" value="기업 및 단체 프로그램 문의">
                                                 <span>기업 및 단체 프로그램 문의</span>
                                             </label>
                                         </div>
                                         <div class="contact-font2">
                                             <label>
-                                                <input type="radio" name="btn1" class="radio">
+                                                <input type="radio" name="contact_category" class="radio" value="파트너십 문의">
                                                 <span>파트너십 문의</span>
                                             </label>
                                         </div>
                                         <div class="contact-font2">
-                                            <label>
-                                                <input type="radio" name="btn1" class="radio">
-                                                <span>기타: <input type="text" placeholder="직접입력" class="t-box"></span>
+                                            <label class="etc-box">
+                                                <input type="radio" name="contact_category" class="radio" value="기타">
+                                                <span>기타: <input type="text" id="inputField"  placeholder="직접입력" class="t-box"></span>
                                             </label>
                                         </div>
                                     </div>
@@ -111,23 +111,21 @@
                                                 <p class="contact-font3">이름</p>
                                                 <span class="red"></span>
                                             </div>
-                                            <input type="text" class="p-box">
+                                            <input type="text" name="non_username" class="p-box" id="usernameInput">
                                         </label>
                                     </div>
                                     <div class="num">
-                                        <form action="">
-                                            <label>
+                                            <label for="user_phone">
                                                 <div class="red-3">
                                                     <p class="contact-font3">연락처</p>
                                                     <span class="red"></span>
                                                 </div>
-                                                <input type="text" class="n-box">
+                                                <input type="text" name="non_userphone" class="n-box" id="phone1" maxlength="3">
                                                 <span>-</span>
-                                                <input type="text" class="n-box">
+                                                <input type="text" name="non_userphone" class="n-box" id="phone2" maxlength="4">
                                                 <span>-</span>
-                                                <input type="text" class="n-box">
+                                                <input type="text" name="non_userphone" class="n-box" id="phone3" maxlength="4">
                                             </label>
-                                        </form>
                                     </div>
                                 </div>
                                 <div class="email">
@@ -136,7 +134,7 @@
                                             <p class="contact-font3">이메일</p>
                                             <span class="red"></span>
                                         </div>
-                                        <input type="text">
+                                        <input type="email" name="non_useremail" class="e-box"  id="emailInput">
                                     </label>
                                 </div>
                                 <div class="inquiry">
@@ -145,7 +143,7 @@
                                             <p class="contact-font3">문의하실 내용을 자세히 알려주세요</p> 
                                             <span class="red2-1"></span>
                                         </div>
-                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        <textarea name="contact_content" cols="30" rows="10" class="area-box" id="contentInput"></textarea>
                                     </label>
                                 </div>
                                 <div class="infor">
@@ -153,7 +151,8 @@
                                         <p class="contact-font5">개인정보 수집 및 이용 동의</p>
                                         <span class="red2"></span>
                                     </div>
-                                    <div class="i-box"><p>더블유엘비컴퍼니(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.<br>
+                                    <div class="i-box">
+                              <p>더블유엘비컴퍼니(이하 ‘회사’라 한다)는 개인정보 보호법 제30조에 따라 정보 주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리지침을 수립, 공개합니다.<br>
                                         <br>
                                         <strong>제1조 (개인정보의 처리목적)</strong><br>
                                         회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.<br>
@@ -307,18 +306,18 @@
                                         <br>
                                         <!-- 사이트 오픈일에 맞게 수정 필요 --><br>
                                         <strong>제13조(개인정보 처리방침 시행 및 변경)</strong><br>
-                                        이 개인정보 처리방침은 2023. 1. 1.부터 적용됩니다.</p></div>
-                                        <label>
-                                            <input type="checkbox">
-                                            <span class="contact-font5">개인정보 수집 및 이용에 동의합니다</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="doinquiry">
-                                    <a href="#" class="contact-font4">문의하기</a>
+                                        이 개인정보 처리방침은 2023. 1. 1.부터 적용됩니다.</p>
+                                        </div>
+                                    <label>
+                                        <input type="checkbox" name="contact_agree" class="agree-box"  id="agreeCheckbox">
+                                        <span class="contact-font5">개인정보 수집 및 이용에 동의합니다</span>
+                                    </label>
                                 </div>
                             </div>
-                        </form>
+                                <div class="doinquiry">
+                                    <button class="contact-font4" id="submitButton">문의하기</button>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </section>
