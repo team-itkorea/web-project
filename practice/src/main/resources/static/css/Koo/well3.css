@@ -1,0 +1,267 @@
+#bb {
+    /* border: 1px solid; */
+    margin: auto;
+    width: 850px;
+    height: 350px;
+}
+
+.real {
+    position: relative;
+}
+
+.container img {
+    width: 100%;
+}
+
+.abs {
+    background-color: #ffffff;
+    position: absolute;
+    top: 4720px;
+    left: 780px;
+}
+
+.img-b {
+    border: 1px solid;
+    border-radius: 22px 22px 22px 22px;
+    border-color: #222222;
+    margin: 0px 0px 10px 0px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    width: 310px;
+    height: 22px;
+    transition: background-color 0.8s ease;
+    letter-spacing: -1px;
+}
+
+.img-b:hover {
+    background-color: #222222;
+    color: white;
+}
+
+.img-b:hover a {
+    color: #ffffff;
+}
+
+.block {
+    box-sizing: border-box;
+    border: 0;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+    width: 850px;
+    height: 100px;
+}
+
+.link {
+    border: 0px solid;
+    margin-left: auto;
+    width: 100px;
+    height: 75px;
+}
+
+.link-i {
+    float: right;
+}
+
+.ic-btn {
+    border: 0px solid;
+    margin: 0px 0px 0px 25px;
+    cursor: pointer;
+}
+
+#openModalBtn {
+    border: 0px;
+    background-color: #ffffff;
+}
+
+.next-box-a {
+    box-sizing: border-box;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    margin: auto;
+    line-height: 35px;
+    width: 850px;
+    height: 40px;
+}
+
+.next-box-b {
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e6e6;
+    margin: auto;
+    line-height: 35px;
+    width: 850px;
+    height: 40px;
+}
+
+.next span {
+    margin: 0px 0px 0px 10px;
+}
+
+.mok {
+    border: 1px solid #222222;
+    border-radius: 20px 20px 20px 20px;
+    margin: 15px 0px 0px 0px;
+    padding: 4px 15px 6px 15px;
+    text-align: center;
+    line-height: 18px;
+    width: 30px;
+    height: 20px;
+}
+
+.mok-b {
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    /* z-index: 1; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 5px 5px 5px 5px;
+    margin: 315px auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 288px;
+    height: 278px;
+}
+
+.close {
+    box-sizing: border-box;
+    color: #aaaaaa;
+    float: right;
+    margin-top: -10px;
+    /* justify-content: center; */
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.test {
+    box-sizing: border-box;
+    border: 0px solid;
+    padding: 7px;
+    border-color: #222222;
+    width: 308px;
+    height: 30px;
+}
+
+.test-u {
+    box-sizing: border-box;
+    border: 0px solid;
+    border-color: #222222;
+    width: 308px;
+    height: 252px;
+}
+
+.links {
+    box-sizing: border-box;
+    border: 0px solid;
+    width: 308px;
+    height: 210px;
+}
+
+.line-link {
+    box-sizing: border-box;
+    border: 0px solid;
+    margin-left: 2px;
+    padding-bottom: 5px;
+}
+
+.band-link {
+    box-sizing: border-box;
+    border: 0px solid;
+    margin-left: 2px;
+    padding-bottom: 5px;
+}
+
+.naver-link {
+    box-sizing: border-box;
+    border: 0px solid;
+    margin-left: 3px;
+    padding-bottom: 4px;
+}
+
+.facebook-link {
+    box-sizing: border-box;
+    border: 0px solid;
+    margin-left: 2px;
+}
+
+.twiter-link {
+    box-sizing: border-box;
+    border: 0px solid;
+    margin-left: 4px;
+}
+
+.u {
+    display: flex;
+    align-items: center;
+}
+
+.links-copy {
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+    background-color: #eeeeee;
+    margin: -7px 0px 0px 8px;
+    padding: 10px;
+    text-align: left;
+    width: 215px;
+    height: 34px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.links-copy2 {
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+    border-left: 0px;
+    background-color: #ffffff;
+    margin-top: -7px;
+    width: 58px;
+    height: 34px;
+}
+
+.links-copy2:hover {
+    background-color: #e5e7eb;
+    /* background-color: #222222; */
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+
+/* 스크롤바 안보이게하기 */
+body{
+    -ms-overflow-style: none;
+    }
+    
+    ::-webkit-scrollbar {
+    display: none;
+    }
+    
+    /*특정 부분 스크롤바 없애기*/
+    .box{
+    -ms-overflow-style: none;
+    }
+    .box::-webkit-scrollbar{
+    display:none;
+}

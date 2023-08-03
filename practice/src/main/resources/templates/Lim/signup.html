@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <script src="https://kit.fontawesome.com/6f4cc019cf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/Lim/header.css">
+    <link rel="stylesheet" href="/static/css/Lim/login.css">
+    <link rel="stylesheet" href="/static/css/Lim/style.css">
+</head>
+<body>
+    <header id="header">
+        <header class="header-inner">
+            <nav class="nav">
+                <div><a href="#">BRAND</a></div>
+                <div><a href="#">PROGRAM</a></div>
+                <div><a href="#">WELL MATE</a></div>
+                <div><a href="#">WELLNESS ITEM</a></div>
+                <div><a href="#">CONTACT</a></div>
+            </nav>
+            <div class="logo"><img src="/img/logo.png" alt=""></div>
+            <nav class="login">
+                <p>로그인</p>
+                <p>마이페이지</p>
+                <div class="bar-img"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </header>
+    </header>
+    <!-- 로그인 부분 -->
+    <div class="inside">
+        <div class="white1"></div>
+        <div class="login">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="white2"></div>
+        <div>
+            <div>
+                <div class="text_c1" >
+                    <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/">
+                        <img src="/img/naver.png" alt="">네이버로 시작하기</a>
+                </div>
+                <div class="text_c2" >
+                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S2013530587%3A1689162722840170&continue=https%3A%2F%2Fwww.google.com%3Fhl%3Dko&ec=GAlA8wE&hl=ko&flowName=GlifWebSignIn&flowEntry=AddSession">
+                        <img src="/img/google.png" alt="">Google로 시작하기</a>
+                </div>
+                <div class="text_c3" >
+                    <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fcs.kakao.com%2Fhelps%3Fservice%3D8%26locale%3Dko%26category%3D25#login">
+                        <img src="/img/KakaoTalk.png" alt="">카카오로 시작하기</a>
+                </div>
+                <div class="and">
+                    <div class="border"></div>
+                    <div class="border-and">또는</div>
+                    <div class="border1"></div>
+                </div>
+                <form action="/auth/signin" method="post">
+                    <p>
+                        <button class="text_c4">ID/PW회원가입</button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div style="margin-top: 0px; margin-bottom: 0px;">
+                <div style="width: 100%; min-height: 1px; height: 60px;"></div>
+            </div>
+        </div>
+        <hr class="line">
+        
+    </div>
+    <!--foot구간-->
+    <footer id="footer">
+        <img src="/static/img/footer-img01.png" alt="">
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+/* >>>>>> header 부분 <<<<<< */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 93px;
+    border-bottom: 1px solid #000;
+
+}
+
+#header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1500px;
+}
+
+#header .nav {
+    display: flex;
+    width: 600px;
+    font-size: 17px;
+    color: #555;
+}
+
+#header .nav div {
+    width: 100px;
+    margin-right: 20px;
+    /* background-color: antiquewhite; */
+}
+
+#header .nav div:nth-child(1) {
+    width: 70px;
+}
+
+#header .nav div:nth-child(4) {
+    width: 150px;
+    text-align: center;
+}
+
+#header .nav a {
+    color: #555;
+}
+
+#header .logo {
+    width: 135px;
+    height: 93px;
+    margin-top: 35px;
+    margin-left: -480px;
+}
+
+#header .logo img {
+    width: 100%;
+}
+
+#header .login {
+    display: flex;
+}
+
+#header .login  p {
+    font-size: 14px;
+    margin-right: 15px;
+}

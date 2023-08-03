@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.example.practice.user.UserRepository">
+	<insert id="addUser" parameterType="com.example.practice.user.User">
+		insert into
+  			user
+	  	values(
+	  		0,
+	  		#{user_name},
+	  		#{user_email},
+	  		#{user_password},
+	  		#{user_address},
+	  		#{user_phone},
+	  		#{user_gender},
+	  		#{user_birth},
+	  		#{user_profile_img},
+	  		#{user_role},
+	  		now(),
+	  		now()
+	  	)
+	</insert>
+	
+	<select id="findByUseremail" parameterType="String" resultType="com.example.practice.user.User">
+		select
+  			*
+	  	from
+	  		user
+	  	where
+			user_email = #{user_email}
+	</select>
+	
+	<update id="updataUserByUserCode" parameterType="com.example.practice.user.User">
+		UPDATE
+			user
+		SET
+			user_name = #{user_name},
+			user_address =  #{user_address},
+	  		user_phone =  #{user_phone},
+	  		user_gender =  #{user_gender},
+	  		user_birth =  #{user_birth},
+	  		user_profile_img =  #{user_profile_img}
+		WHERE
+			user_code = #{user_code};
+	</update>
+	<delete id="remove" parameterType="Integer">
+		delete
+		from
+			user
+		where
+			user_code = #{user_code}
+	</delete>
+</mapper>
