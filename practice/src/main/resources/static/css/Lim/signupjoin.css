@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;400&display=swap');
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inside {
+    max-width: 500px;
+    margin: 0px auto;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.user-imgfile {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.user-uplode-file {
+    width: 100%;
+    
+}
+
+.user-input input {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    width: 500px;
+    height: 40px;
+    border: 1px solid #ececec;
+    padding: 12px 16px;
+}
+
+.user-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.user-name li {
+    color: blue;
+    display: contents;
+    border-radius: 50%;
+}
+.user-name span {
+    font-family: 'NanumSquareRound';
+    margin-right: 5px;
+}
+.user-name input {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    margin-top: 7px;
+    width: 500px;
+    height: 40px;
+    border: 1px solid #ececec;
+    padding: 12px 16px;
+}
+
+.user-gender {
+    margin-top: 20px;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.user-gender span {
+    font-family: 'NanumSquareRound';
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.user-name-span {
+    color: blue;
+    border-radius: 50%;
+    text-align: center;
+    display: contents;
+    justify-content: center;
+}
+
+.gender-m {
+    font-size: 14px;
+    display: flex;
+}
+.gender-m input {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 7px;
+
+}
+
+.gender-m span {
+    margin-top: 10px;
+}
+.gender-f {
+    font-size: 14px;
+    display: flex;
+}
+.gender-f input {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+
+}
+
+.gender-f span {
+    margin-top: 16px;
+}
+
+.user-telnumber {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.user-telnumber span {
+    margin-right: 5px;
+}
+
+.user-telnumber li {
+    color: blue;
+    border-radius: 50%;
+    text-align: center;
+    display: contents;
+    justify-content: center;
+}
+
+.user-telnumber input {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    margin-top: 7px;
+    width: 500px;
+    height: 40px;
+    border: 1px solid #ececec;
+    padding: 12px 16px;
+}
+
+.user-address {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.user-address-span {
+    margin-bottom: 7px;
+}
+
+.user-address span {
+    margin-right: 5px;
+}
+
+.user-address li {
+    color: blue;
+    border-radius: 50%;
+    text-align: center;
+    display: contents;
+    justify-content: center;
+    
+}
+
+.user-address input {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    margin-top: 0px;
+    width: 500px;
+    height: 40px;
+    border: 1px solid #ececec;
+    padding: 12px 16px;
+}
+
+.user-birth {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.user-birth span {
+    margin-right: 5px;
+}
+
+.user-birth li {
+    color: blue;
+    border-radius: 50%;
+    text-align: center;
+    display: contents;
+    justify-content: center;
+}
+
+.user-birth1 {
+    text-align: left;
+    font-size: 16px;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #ececec;
+    padding: 12px;
+    margin-top: 7px;
+}
+
+.signup-button {
+    width: 500px;
+    font-size: 12px;
+    font-family: 'NanumSquareRound';
+    padding: 13px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid;
+}
+
+.line {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-top: 1px dotted rgba(75, 75, 75, 0.3);
+}
+
+
+
+

@@ -1,0 +1,18 @@
+2023-08-02 18:04:29,057 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-08-02 18:04:42,368 [Worker-2: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:practice:0.0.1-SNAPSHOT @ C:\lch_java_weekend\lch_java_weekend\java\git5\git\practice\pom.xml.
+2023-08-02 18:04:45,857 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-02 18:04:45,858 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-02 18:04:45,867 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-02 18:04:45,884 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 110 resources
+2023-08-02 18:04:46,467 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-02 18:04:46,467 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-02 18:04:46,468 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\lch_java_weekend\lch_java_weekend\java\git5\git\practice\src\test\resources
+2023-08-03 18:49:40,694 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-08-03 18:49:55,177 [Worker-3: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:practice:0.0.1-SNAPSHOT @ C:\lch_java_weekend\lch_java_weekend\java\git6\practice\pom.xml.
+2023-08-03 18:49:58,080 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-03 18:49:58,080 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-03 18:49:58,086 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-08-03 18:49:58,154 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 113 resources
+2023-08-03 18:49:58,807 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-08-03 18:49:58,807 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-03 18:49:58,808 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\lch_java_weekend\lch_java_weekend\java\git6\practice\src\test\resources
