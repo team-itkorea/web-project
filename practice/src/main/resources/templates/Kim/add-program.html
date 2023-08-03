@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로그램 추가</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    .layout {
+        height: 800px;
+        width: 650px;
+    }
+    .like {
+        text-align: right;
+        width: 50px;
+    }
+</style>
+<body>
+    <div class="layout">
+        <form enctype="multipart/form-data">
+            <h1>프로그램 추가</h1><hr>
+                <label for="theme">테마 선택</label><br>
+                    <select name="theme">
+                        <option value="none">선택(필수)</option>
+                        <option value="L">일상 탐험</option>
+                        <option value="W">웰니스 클럽</option>
+                    </select>
+        
+                <input type="text" name="title" placeholder="제목">
+                <input type="text" name="price" placeholder="가격(원)">
+    
+                <textarea name="info" placeholder="내용을 입력하세요." rows="10" cols="60" style="resize: none; margin-top: 10px;"></textarea>
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>장소</th>
+                            <td><input type="text" name="place"></td>
+                        </tr>
+                        <tr>
+                            <th>일정</th>
+                            <td><input type="text" name="schedule"></td>
+                        </tr>
+                        <tr>
+                            <th>시간</th>
+                            <td><input type="text" name="time"></td>
+                        </tr>
+                        <tr>
+                            <th>정원</th>
+                            <td><input type="text" name="participants"></td>
+                        </tr>
+                    </tbody>
+                </table>     
+    
+                <hr>
+        
+                <div name="input">
+                    <h4 style="display: inline;">옵션</h4>
+                    <input name="intext"></input>
+                    <button id="btn1" type="button" onclick="back_Add()">추가</button>
+                    <button id="btn2" type="button" onclick="front_Add()">삽입</button>
+                    <button id="btn3" type="button" onclick="Reset()">초기화</button>
+                    <button id="btn4" type="button" onclick="delete_First()">첫번째 옵션 삭제</button>
+                    <button id="btn5" type="button" onclick="delete_Final()">마지막 옵션 삭제</button>
+                </div>
+                <div name="out">
+                </div>
+                <hr>
+        
+                <h4 style="display: inline;">대표 이미지</h4>
+                <input type="file" name="imgUrl_1" class="a">
+                <br>
+                <h4 style="display: inline;">상세 이미지</h4>
+                <input type="file" name="imgUrl_2" class="b">
+                <br>
+                
+                <hr>
+
+                <h4 style="display: inline;">좋아요</h4>
+                <input type="text" name="like" value="0">
+                <p style="display: inline;">개</p>
+        
+                <hr>
+                <button type="button" onclick="getProgramData()">등록하기</button>
+        </form>
+    </div>
+        <!-- <label for="numberOfPeople">인원 수:</label>
+        <input type="number" id="numberOfPeople" value="1" min="1" max="10"> -->
+    <script type="text/javascript" src="/static/js/Kim/program-add.js"></script>
+</body>
+</html>

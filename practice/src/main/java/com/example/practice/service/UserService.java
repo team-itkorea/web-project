@@ -1,13 +1,10 @@
 package com.example.practice.service;
 
-import com.example.practice.dto.UpdateUserReqDto;
-import com.example.practice.dto.UseremailCheckReqDto;
+import com.example.practice.dto.SignupReqDto;
 
 public interface UserService {
-	public boolean signup() throws Exception;
-	public boolean checkUseremail(UseremailCheckReqDto useremailCheckReqDto) throws Exception;
+	public boolean signup(SignupReqDto signupReqDto);
 	
-	public boolean updateUser(UpdateUserReqDto updateUserReqDto) throws Exception;
+	public boolean getProgramList(String theme);
 	
-	public boolean removeUser(int userCode) throws Exception;
 }
