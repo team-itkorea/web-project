@@ -25,4 +25,18 @@
 	  		now()
 	  	)
 	</insert>
+	
+	<select id="GetProgramList" parameterType="String" resultType="com.example.practice.admin.Program">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</select>
 </mapper>
