@@ -42,23 +42,19 @@ public class PageController {
 	
 	// 스프링 시큐리티가 낚아채는 상황
 	// SecurityConfig 생성 후 비활성화 할 것
-	@GetMapping("/auth/signin")
+	@GetMapping("/loginForm")
 	public String loginForm() {
-		return "Lim/signin";
+		return "loginForm";
 	}
 	
-	@GetMapping("/auth/signup")
+	@GetMapping("/joinForm")
 	public String joinForm() {
 		return "Lim/signupjoin";
 	}
-	@GetMapping("/auth/mypage")
-	public String mypage() {
-		return "mypage";
-	}
 	
-	@GetMapping("/auth/mypage/userdelet")
-	public String userdelet() {
-		return "Lim/userdelet";
+	@GetMapping("/board/write")
+	public String boardWriteForm() {
+		return "/Nam/boardwrite";
 	}
 	
 //	@PostMapping("/join")
