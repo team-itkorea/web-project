@@ -1,15 +1,15 @@
-function load(nowPage) {
+let programTheme = location.pathname.substring(location.pathname.lastIndexOf("/") + 1)
+
+load("/program/")
+
+function load(uri) {
 	$.ajax({
 		async: false,
-		type: "get",
-		url: "/program/leisure/list/" + nowPage,
-		data: {
-			"searchFlag": searchFlag,
-			"searchValue": searchValue
-		},
+		type: "GET",
+		url: uri + programTheme,
 		dataType: "json",
 		success: (response) => {
-			getList(response.data)
+			getProgram(response.data)
 		},
 		error: (error) => {
 			console.log(error)
@@ -17,10 +17,10 @@ function load(nowPage) {
 	})
 }
 
-function getList(list) {
+function getProgram(program) {
 	const tbody = document.querySelector("tbody")
 	tbody.innerHTML = ""
-	list.forEach(notice => {
+	program.forEach(notice => {
 		tbody.innerHTML += `
 			<tr class="notice-row">
 	            <td>${notice.noticeCode}</td>

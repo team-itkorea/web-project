@@ -20,4 +20,10 @@ public class UserServiceImpl implements UserService {
 		return userRepository.addUser(userEntity) > 0;
 	}
 
+	@Override
+	public boolean getProgramList(String theme) {
+		
+		return false;
+	}
+
 }

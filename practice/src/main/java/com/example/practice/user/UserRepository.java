@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserRepository {
 	public int addUser(User user);
 
-	public User findByUsername(String username); 
+	public User findByUsername(String username);
 }

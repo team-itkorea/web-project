@@ -21,6 +21,7 @@ public class AddProgramReqDto {
 	private String place;
 	private String schedule;
 	private String time;
+	
 	private String participants;
 	
 	private List<String> option;

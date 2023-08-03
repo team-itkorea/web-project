@@ -1,5 +1,7 @@
 package com.example.practice.admin;
 
+import com.example.practice.dto.ProgramListRespDto;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,4 +28,11 @@ public class Program {
 	private String program_like;
 	private String program_imgUrl_1;
 	private String program_imgUrl_2;
+	
+	public ProgramListRespDto toListDto() {
+		return ProgramListRespDto.builder()
+				.theme(program_theme)
+				.title(program_title)
+				.fileName(program_imgUrl_1).build();
+	}
 }

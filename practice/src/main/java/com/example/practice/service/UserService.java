@@ -5,4 +5,6 @@ import com.example.practice.dto.SignupReqDto;
 public interface UserService {
 	public boolean signup(SignupReqDto signupReqDto);
 	
+	public boolean getProgramList(String theme);
+	
 }
