@@ -1,0 +1,49 @@
+.item-footer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.item-entity {
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-entity > * {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    height: 35px;
+    text-indent: 5px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.option {
+    background-color: white;
+    border: 1px solid rgb(177, 177, 177);
+}
+
+.submit-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.buy, .like {
+    height: 50px;
+    background-color: white;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 40px;
+}
+
+
+.buy { width: 67%;}
+.like { flex: 1; margin-left: 10px;}
+

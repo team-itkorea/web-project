@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;400&display=swap');
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* body { position: fixed;  } */
+
+.inside {
+    max-width: 500px;
+    margin: 0px auto;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+/* 
+div {
+    display: block;
+} */
+
+h1 {
+    color: #222222;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'NanumSquareRound';
+}
+
+.white1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%; 
+    min-height: 1px; 
+    height: 60px;
+}
+
+.white2 {
+    width: 100%; 
+    min-height: 1px; 
+    height: 30px;
+}
+
+.text_c1 {
+    font-family: 'NanumSquareRound';
+    width: 500px;
+    padding: 13px 25px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #00cf35;
+    border-radius: 50px;
+}
+
+.text_c1 img {
+    height: 20px;
+    float: left;
+    margin-left: -10px;
+}
+
+.text_c1 a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    display: block;
+}
+
+.text_c2 {
+    font-family: 'NanumSquareRound';
+    padding: 13px 25px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid rgba(75, 75, 75, 0.3);
+   
+}
+.text_c2 a {
+    text-decoration: none;
+    color: #222;
+}
+.text_c2 img {
+    
+    height: 20px;
+    float: left;
+    margin-left: -10px;
+}
+
+.text_c3 {
+    font-family: 'NanumSquareRound';
+    padding: 13px 25px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffeb00;
+    border-radius: 50px;
+    
+}
+
+.text_c3 a {
+    text-decoration: none;
+    color: #222;
+}
+
+.text_c3 img {
+    height: 20px;
+    float: left;
+    margin-left: -10px;
+}
+.and {
+    font-family: 'NanumSquareRound';
+    margin: 25px 0px;
+    display: flex;
+}
+
+.border {
+    text-align: left;
+    margin-top: 8px;
+
+    border-top: 1px dotted rgba(75, 75, 75, 0.3);
+
+    width: 180px;
+}
+
+.border-and {
+    margin: 0px 55px;
+   
+}
+
+.border1 {
+    text-align: right;
+    margin-top: 8px;
+
+    border-top: 1px dotted rgba(75, 75, 75, 0.3);
+    margin-right: 0;
+
+    width: 180px;
+}
+
+.id {
+    font-family: 'NanumSquareRound';
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid;
+}
+
+.login-input input {
+    font-family: 'NanumSquareRound';
+    font-size: 14px;
+    width: 500px;
+    height: 50px;
+    border: 1px solid #ececec;
+    padding: 12px 16px;
+}
+
+.text_c4 {
+    width: 500px;
+    font-size: 14px;
+    font-family: 'NanumSquareRound';
+    padding: 13px 20px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid;
+   
+}
+
+.login-click  {
+    font-family: 'NanumSquareRound';
+    font-size: 16px;
+    margin: 15px 0px;
+}
+
+.login-click1  {
+    display: flex;
+}
+
+.login-click1 input {
+    width: 20px;
+    height: 20px;
+}
+
+.login-click1 span  {
+    display: block;
+    font-family: 'NanumSquareRound';
+    font-size: 16px;
+    margin: 15px 0px;
+    margin-left: 10px;
+    margin-top: 1px;
+    color: #555;
+}
+
+
+.login-text {
+    display: flex;
+    justify-content: space-between;
+
+   
+
+}
+
+.login-text a {
+    font-family: 'NanumSquareRound';
+    font-size: 15px;
+    color: #222222;
+}
+
+hr {
+    border-color:rgba(75, 75, 75, 0.05);
+}
+
+#footer {
+    width: 100%;
+    height: 300px;
+}
+
+#footer img {
+    width: 100%;
+}
+
+/* <<<<< 모달창 >>>>>>> */
+
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modal::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.modal-body {
+    position: absolute;
+    top: 8%;
+    left: 40%;
+
+    width: 370px;
+    height: 530px;
+    background-color: #fff;
+
+    border-radius: 5px;
+}
+
+/* <<<<<<<<<< 아이디 찾기 >>>>>>>>>>>> */
+.find-id {
+    /* display: none; */
+    position: relative;
+    text-align: center;
+}
+
+.modal-header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    /* background-color: #ececec; */
+    border-bottom: 1px solid #ececec;
+}
+
+.modal-header li {
+    padding: 20px 0;
+    font-size: 16px;
+    font-family: 'NanumSquareRound';
+    font-weight: 800;
+}
+
+.find-id img {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+}
+
+.find-modal {
+    margin: 0 auto;
+    width: 330px;
+    height: 45px;
+    margin-top: 20px;
+    background-color: #ececec;
+}
+
+.find-modal ul {
+    display: flex;
+}
+
+.find-modal li {
+    width: 165px;
+    height: 45px;
+    background-color: #fff;
+    border-top: 1px solid #f39f92;
+    border-left: 1px solid #f39f92;
+    text-align: center;
+    padding-top: 13px;
+    color: #333;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.find-modal li:nth-child(1) {
+    color: #f39f92;
+}
+
+.find-modal li:nth-child(2) {
+    border-bottom: 1px solid #f39f92;
+    border-top: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    background-color: #ececec;
+    padding-left: 10px;
+}
+
+.find-id p {
+    margin-top: 20px;
+    color: #777;
+    font-size: 12px;
+}
+
+.email-find {
+    width: 330px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-bottom: 1px solid #dbdbdb ;
+}
+
+.email-input-first {
+    margin-top: 12px;
+    width: 330px;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    border-bottom: none;
+}
+
+.email-input {
+    width: 330px;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    border-bottom: none;
+}
+
+.check-radio {
+    display: flex;
+}
+
+.check-radio-area {
+    margin-top: 10px;
+    display: flex;
+}
+
+.check-radio-area h4 {
+    margin-left: 5px;
+    font-size: 14px;
+    letter-spacing: -1px;
+    color: #333;
+}
+
+.check-radio h4 {
+    margin-left: 5px;
+    font-size: 14px;
+    letter-spacing: -1px;
+    color: #333;
+}
+
+.radio-email {
+    width: 20px;
+    height: 20px;
+}
+
+.radio-phone {
+    width: 20px;
+    height: 20px;
+}
+
+/*  */
+.phone-find-area {
+    width: 330px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.phone-find {
+    width: 330px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.phone-input {
+    margin-top: 0px;
+    width: 330px;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+}
+
+.button {
+    margin: 0 auto;
+    width: 330px;
+    height: 40px;
+    margin-top: 100px;
+    background-color: #555;
+}
+
+.final-find-id {
+    width: 330px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #555;
+}
+
+.final-find-id p {
+    margin-top: 0px;
+}
+
+.final-find-id:hover {
+    background-color: #222;
+}
+
+.final-find-id:hover p {
+    color: #fff;
+}
+
+
+/* <<<<<<<<<< 비밀번호 찾기 >>>>>>>>>>>> */
+
+.find-password {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+.modal-header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    /* background-color: #ececec; */
+    border-bottom: 1px solid #ececec;
+}
+
+.modal-header li {
+    padding: 20px 0;
+    font-size: 16px;
+    font-family: 'NanumSquareRound';
+    font-weight: 800;
+}
+
+
+.find-password img {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+}
+
+.find-modal-password {
+    margin: 0 auto;
+    width: 330px;
+    height: 45px;
+    margin-top: 20px;
+    background-color: #ececec;
+}
+
+.find-modal-password ul {
+    display: flex;
+}
+
+.find-modal-password li {
+    width: 165px;
+    height: 45px;
+    background-color: #fff;
+    border-top: 1px solid #f39f92;
+    border-left: 1px solid #f39f92;
+    text-align: center;
+    padding-top: 13px;
+    color: #333;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.find-modal-password li:nth-child(1) {
+    border-bottom: 1px solid #f39f92;
+    border-left: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+    background-color: #ececec;
+    color: #555;
+    padding-left: 10px;
+}
+
+.find-modal-password li:nth-child(2) {
+    color: #f39f92;
+    background-color: #fff;
+    border-right: 1px solid #f39f92;
+    border-top: 1px solid #f39f92;
+    border-bottom: none;
+}
+
+.id-find {
+    width: 330px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.final-find-password {
+    width: 330px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #555;
+}
+
+.final-find-password:hover {
+    background-color: #222;
+}
+
+.final-find-password:hover p {
+    color: #fff;
+}
