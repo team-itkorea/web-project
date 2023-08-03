@@ -1,0 +1,260 @@
+#section-color {
+    background-color: #ffffff;
+}
+
+.visible {
+    /* border: 1px solid; */
+    width: 100%;
+    height: 89px;
+}
+
+
+.contact-box {
+    /* box-sizing: border-box;
+    border: 1px solid; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 11px;
+
+    width: 1889px;
+    height: 100%;
+}
+
+.contact-box2 {
+    /* box-sizing: border-box;
+    border: 1px solid; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 17px;
+
+    width: 100%;
+    /* height: 200px;   */
+}
+
+.contact-small {
+    margin: 6px;
+}
+
+.block {
+    width: 100%;
+    height: 78px;
+}
+
+.hr-line {
+    border: 1px solid #cccccc70;
+    width: 800px;
+    margin: auto;
+}
+
+.block2 {
+    margin-left: 550px;
+}
+
+.visible-box {
+    border: 0px solid;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    width: 600px;
+    height: 100%;
+}
+
+.visible-box .contact-font3 .red {
+    display: flex;
+}
+
+.contact-font3 {
+    margin: 7px 0px 15px 0px;
+}
+
+.red-3 {
+    display: flex;
+}
+
+.red{
+    box-sizing: border-box;
+    border: 1px solid #f25656;
+    border-radius: 50%;
+    background-color: #f25656;
+    margin: 13px 0px 0px 5px;
+    width: 5px;
+    height: 5px;
+}
+
+.red2{
+    box-sizing: border-box;
+    border: 1px solid #f25656;
+    border-radius: 50%;
+    background-color: #f25656;
+    width: 5px;
+    height: 5px;
+}
+
+.red2-1{
+    box-sizing: border-box;
+    border: 1px solid #f25656;
+    border-radius: 50%;
+    background-color: #f25656;
+    margin: 16px 0px 0px 7px;
+    width: 5px;
+    height: 5px;
+}
+
+
+.contact-font2 {
+    margin-bottom: 15px;
+}
+
+.radio {
+    box-sizing: border-box;
+    border-bottom: #ffffff;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px ;
+    width: 22px;
+    height: 22px;
+    accent-color: rgb(187, 127, 127);
+    outline: none;
+}
+
+.contact-font2 label {
+    box-sizing: border-box;
+    margin: 5px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-font2 input::placeholder {
+    font-size: 16px;
+    color: #999999;
+}
+
+.t-box {
+    border: 1px solid #bcbcbc;
+    padding: 9px 12px;
+    width: 175px;
+    outline: none;
+}
+
+.name {
+    margin: 0px 0px 15px 0px;
+    padding: 0px 25px 0px 0px;
+}
+
+.name .p-box {
+    border: 1px solid #bcbcbc;
+    padding: 6px;
+    width: 349px;
+    outline: none;
+}
+
+.name-num {
+    display: flex;
+}
+
+.num {
+    margin: 0px 0px 15px 0px;
+    padding: 0px 25px 0px 0px;
+}
+
+.num .n-box {
+    border: 1px solid #bcbcbc;
+    padding: 6px 12px;
+    width: 39px;
+    outline: none;
+}
+
+.email {
+    margin: 0px 0px 10px;
+}
+
+.email input{
+    border: 1px solid #bcbcbc;
+    padding: 6px 12px;
+    width: 774px;
+    outline: none;
+}
+
+.inquiry textarea {
+    border: 1px solid #bcbcbc;
+    padding: 6px 12px;
+    width: 774px;
+    height: 69px;
+    outline: none;
+    font-size: 16px;
+}
+
+.infor {
+    margin: 0px 0px 20px;
+}
+
+.infor p {
+    margin: 10px 0px 0px 0px;
+}
+
+.infor .i-box {
+    border: 1px solid #bcbcbc;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    width: 778px;
+    height: 73px;
+    overflow-y: scroll;
+}
+
+.infor input {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 4px;
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(187, 127, 127);
+}
+
+.infor label{
+    display: flex;
+    align-items: center;
+}
+
+.infor input {
+    outline: none;
+    margin-right: 10px;
+}
+
+.infor .red-3 span {
+    margin: 18px 0px 0px 5px;
+}
+
+/* .doinquiry {
+    border: 1px solid;
+    border-radius: 22px 22px 22px 22px;
+    margin: 0px 0px 10px 0px;
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+    width: 774px;
+    height: 22px;
+    transition: background-color 0.8s ease;
+    cursor: pointer;
+} */
+
+.doinquiry button {
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 21px 21px 21px 21px;
+    background-color: #ffffff;
+    width: 794px;
+    height: 42px;
+    transition: background-color 0.8s ease;
+    cursor: pointer;
+}
+
+.doinquiry button:hover {
+    background-color: #222222;
+    color: white;
+}
+
+.doinquiry:hover button {
+    border: 0px solid;
+    background-color: #222222;
+    color: #ffffff;
+}

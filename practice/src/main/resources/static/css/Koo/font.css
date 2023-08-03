@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;400&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.mate-font {
+    font-family: 'NanumSquareRound';
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.mate-font1 {
+    font-family: 'NanumSquareRound';
+    font-size: 20px;
+}
+
+.mate-fonts2 {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    font-weight: 400;
+    word-spacing: -1.8px;
+}
+
+.mate-fonts3 {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+
+.mate-story {
+    font-family: 'NanumSquareRound';
+    font-size: 30px;
+    word-spacing: -3px;
+}
+
+.mate-under-font {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 17px;
+}
+
+.mate-under-font-small {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.fontcolor {
+    color: #222222;
+}
+
+.mate-under-font-small {
+    color: #222222;
+}
+
+.nav {
+    color: #111111;
+}
+
+.login {
+    color: #222222;
+}
+
+/* contact font부분 */
+.contact-box{
+    word-spacing: 4px;
+}
+
+.contact-font {
+    font-family: 'NanumSquareRound';
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.contact-iq {
+    font-family: 'NanumSquare';
+    font-size: 18px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.contact-font2 {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-weight: 500;
+    color: #222222;
+}
+
+.contact-font3 {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-weight: 700;
+    color: #222222;
+}
+
+.contact-font4 {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-weight: normal;
+    color: #222222;
+}
+
+.contact-font5 {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-weight: normal;
+    color: #222222;
+}
+
+.contact-font4:hover {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.contact-small {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    font-weight: 400;
+    word-spacing: -1.5px;
+    color: #222222;
+}
+
+.i-box {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    color: #222222;
+}
+
+/* well1~4 */
+
+.next span {
+    font-family: 'NanumSquare';
+    font-size: 16px;
+    color: #222222;
+}
+
+.next i {
+    color: #222222;
+}
+
+.mok-b {
+    font-family: 'NanumSquare';
+    font-size: 13px;
+}
+
+.ic-btn {
+    font-size: 22px;
+    background-color: #ffffff;
+}
+
+.test {
+    font-family: 'NanumSquareRound';
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.links-copy {
+    font-family: 'NanumSquare';
+    font-size: 13px;
+    color: #818181;
+}
+
+.img-b {
+    color: #222222;
+}

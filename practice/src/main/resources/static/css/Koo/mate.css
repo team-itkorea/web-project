@@ -1,0 +1,148 @@
+#mate {
+    background-color: #e7c1f8;
+    width: 100%;
+    height: 100px;
+}
+
+.mate-box {
+    box-sizing: border-box;
+    border-bottom: 1px solid #222222;
+    justify-content: center;
+    background-color: #e7c1f8;
+    text-align: center;
+
+    width: 100%;
+    height: 465px;
+}
+
+.box-top {
+    width: 100%;
+    height: 116px;
+}
+
+.mate-font {
+    box-sizing: border-box;
+    border: 0px solid;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 60px;
+    word-spacing: -6px;
+}
+
+.mate-font1 {
+    box-sizing: border-box;
+    border: 0px solid;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0px 33px 0px;
+
+    word-spacing: -2px;
+}
+
+.box-middle {
+    box-sizing: border-box;
+    border-top: 1px solid;
+    justify-content: flex-end;
+    margin: auto;
+    padding: 0px;
+
+    width: 75px;
+    height: 16px;
+}
+
+.mate-fonts2 {
+    padding: 4px;
+}
+
+.mate-fonts3 {
+    padding: 0px;
+}
+
+.mate-middle {
+    width: auto;
+    height: 103px;
+}
+
+.mate-story {
+    /* box-sizing: border-box;
+    border: 1px solid black; */
+    margin-left: 202px;
+    width: 220px;
+}
+
+.mate-under {
+    /* box-sizing: border-box;
+    border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    flex-flow: row wrap;
+    padding: 9px;
+
+    width: auto;
+    height: 900px;
+}
+
+.mate-under1 {
+    box-sizing: border-box;
+    border: 1px solid #222222;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 15px; 
+
+    width: 479px;
+    height: 450px;
+}
+
+.mate-under2 {
+    box-sizing: border-box;
+    border: 1px solid #222222;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 15px; 
+
+    width: 480px;
+    height: 450px;
+}
+
+.mate-under3 {
+    box-sizing: border-box;
+    border: 0px solid #222222;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 15px; 
+
+    width: 479px;
+    height: 450px;
+}
+
+.mate-uunder {
+    box-sizing: border-box;
+    border: 0px solid #222222;
+    margin: 0%;
+    padding: 18px;
+    width: 478px;
+    height: 86px;
+}
+
+.mate-under-font {
+    /* box-sizing: border-box;
+    border: 0px solid black; */
+    /* padding: 20px; */
+    margin: 0%;
+
+    width: 200px;
+}
+
+.mate-under-font-small {
+    margin: 5px 0px 0px 0px;
+}
+
+.boxbox {
+    width: 100%;
+    height: 165px;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6f4cc019cf.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header id="header">
+        <header class="header-inner">
+            <nav class="nav">
+                <div><a href="#">BRAND</a></div>
+                <div><a href="#">PROGRAM</a></div>
+                <div><a href="#">WELL MATE</a></div>
+                <div><a href="#">WELLNESS ITEM</a></div>
+                <div><a href="#">CONTACT</a></div>
+            </nav>
+            <div class="logo"><img src="./images/logo.png" alt=""></div>
+            <nav class="login">
+                <p>로그인</p>
+                <p>마이페이지</p>
+                <div class="bar-img"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </header>
+    </header>
+    <!-- 로그인 부분 -->
+    <div class="inside">
+        <div class="white1"></div>
+        <div class="login">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="white2"></div>
+        <div>
+            <div>
+                <div class="text_c1" >
+                    <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/">
+                        <img src="./images/naver.png" alt="">네이버로 시작하기</a>
+                </div>
+                <div class="text_c2" >
+                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S2013530587%3A1689162722840170&continue=https%3A%2F%2Fwww.google.com%3Fhl%3Dko&ec=GAlA8wE&hl=ko&flowName=GlifWebSignIn&flowEntry=AddSession">
+                        <img src="./images/google.png" alt="">Google로 시작하기</a>
+                </div>
+                <div class="text_c3" >
+                    <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Fcs.kakao.com%2Fhelps%3Fservice%3D8%26locale%3Dko%26category%3D25#login">
+                        <img src="./images/kakao.png" alt="">카카오로 시작하기</a>
+                </div>
+                <div class="and">
+                    <div class="border"></div>
+                    <div class="border-and">또는</div>
+                    <div class="border1"></div>
+                </div>
+                <form action="/auth/signin" method="post">
+                    <input type="hidden">
+                    <div class="login-input">
+                        <input type="text" title="이메일" id="userEamil" placeholder="이메일">   
+                        <input type="password" title="비밀번호" id="userpassword" placeholder="비밀번호" autocomplete="off">
+                    </div>
+                    <div class="login-click">
+                        <label class="login-click1">
+                            <input type="checkbox" checked="checked" >
+                            <span>로그인상태유지</span>
+                        </label>
+                    </div>
+                    <p>
+                        <button class="text_c4">로그인</button>
+                    </p>
+                </form>
+                <div class="login-text">
+                    <a href="">회원가입</a>
+                    <a href="" class="find-id-password">아이디·비밀번호찾기 </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="margin-top: 0px; margin-bottom: 0px;">
+                <div style="width: 100%; min-height: 1px; height: 60px;"></div>
+            </div>
+        </div>
+        <hr class="line">
+        
+    </div>
+
+    
+    <footer id="footer">
+        <div class="background-img"><img src="./images/footer-img01.png" alt=""></div>
+    </footer>
+
+
+    <!-- 모달창 -->
+    <div id="modal">
+        <div class="modal-body">
+            <!-- 아이디 찾기 -->
+            <div class="find-id">
+                <div class="x-icon"><img src="./images/icon-x.png" alt=""/></div>
+                <!-- <i class="fas fa-thin fa-xmark fa-2xl"></i> -->
+                <ul class="modal-header">
+                    <li>아이디 찾기</li>
+                </ul>
+                <div class="find-modal">
+                    <ul>
+                        <li class="find-id-click">아이디 찾기</li>
+                        <li class="find-password-click">비밀번호 찾기</li>
+                    </ul>
+                </div>
+
+                <p>아이디 찾을 방법을 선택해주세요.</p>
+
+                <div class="email-find">
+                    <div class="check-radio">
+                        <input type="radio" name="name1" class="radio-email" checked>
+                        <h4>가입한 이메일로 찾기</h4>
+                    </div>
+                    <input type="text" title="이메일" id="userEamil" placeholder=" 이메일 또는 아이디" class="email-input-first" style="border-bottom: 1px solid #dbdbdb;">  
+                </div>
+                <div class="phone-find-area">
+                    <div class="check-radio-area">
+                        <input type="radio" name="name1" class="radio-phone" >
+                        <h4>가입한 휴대폰으로 찾기</h4>
+                    </div>
+                </div>
+                <div class="phone-find">
+                    <div class="input-area">
+                        <input type="text" title="이메일" id="userEamil" placeholder=" 이름 또는 닉네임" class="email-input">
+                        <input type="text" title="휴대폰 번호" id="usernumber" placeholder=" 휴대폰 번호" class="phone-input">
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="final-find-id">
+                        <p>아이디 찾기</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 비밀번호 찾기 -->
+            <div class="find-password">
+                <div class="x-icon"><img src="./images/icon-x.png" alt=""/></div>
+                <!-- <i class="fas fa-thin fa-xmark fa-2xl"></i> -->
+                <ul class="modal-header">
+                    <li>비밀번호 찾기</li>
+                </ul>
+                <div class="find-modal-password">
+                    <ul>
+                        <li class="find-id-click">아이디 찾기</li>
+                        <li class="find-password-click">비밀번호 찾기</li>
+                    </ul>
+                </div>
+
+                <div class="id-find">
+                    <input type="text" title="이메일" id="userEamil" placeholder=" 이메일 또는 아이디" class="email-input" style="border-bottom: 1px solid #dbdbdb;">  
+                </div>
+
+                <button class="final-find-password">
+                    <p>비밀번호 찾기</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 자바스크립트 -->
+    <script>
+        $(".find-id-click").click(function () {
+          $(".find-id").show();
+          $(".find-password").hide();
+          $(".phone-find").hide();
+        });
+
+        $(".find-password-click").click(function () {
+          $(".find-password").show();
+          $(".find-id").hide();
+        });
+        
+        $(".radio-phone").click(function () {
+          $(".email-input-first").hide();
+          $(".phone-find").show();
+        });
+
+        $(".radio-email").click(function () {
+          $(".email-input-first").show();
+          $(".phone-find").hide();
+        });
+
+        // 모달 엑스
+
+        $(".x-icon").click(function () {
+          $("#modal").hide();
+        });
+
+        $(".find-id-password").click(function () {
+          $("#modal").show();
+        });
+
+    </script>
+</body>
+</html>
