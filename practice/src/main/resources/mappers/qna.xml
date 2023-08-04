@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.example.practice.user.QnaRepository">
+	<insert id="save" parameterType="com.example.practice.user.Qna">
+		insert into
+  			qna_mst
+	  	values(
+	  		0,
+	  		0,
+	  		0,
+	  		#{qna_title},
+	  		#{qna_content},
+	  		0,
+	  		0,
+	  		0,
+	  		now(),
+	  		now()
+	  	)
+	</insert>
+	<!-- <select id="getBoardList" parameterType="hashmap" resultType="com.example.practice.user.Board">
+		select
+			title,
+			content,
+			create_date
+		from
+			board
+		
+	</select> -->
+	
+</mapper>

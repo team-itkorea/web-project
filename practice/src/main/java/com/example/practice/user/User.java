@@ -1,9 +1,13 @@
 package com.example.practice.user;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Builder
 // DB의 열값이랑 이름 똑같이
 public class User {
@@ -11,6 +15,7 @@ public class User {
 	private int user_code;
 	private String user_name;
 	private String user_email;
+	private String oauth2_id;
 	private String user_password;
 	private String user_address;
 	private String user_phone;
