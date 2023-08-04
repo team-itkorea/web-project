@@ -28,29 +28,29 @@ public class BoardServiceImpl implements BoardService {
 		return boardRepository.save(boardReqDto.toEntityBoard()) > 0 ;
 	}
 	
-//	@Override
-//	public List<BoardRespDto> getBoardList(String type, int page) throws Exception  {
-//		List<Board> boardlist = boardRepository.getBoardList(createGetBoardListMap(type, page));
-//		return createBoardListRespDtos(boardlist);
-//	}
+	@Override
+	public List<BoardRespDto> getBoardList(String type, int page) throws Exception  {
+		List<Board> boardlist = boardRepository.getBoardList(createGetBoardListMap(type, page));
+		return createBoardListRespDtos(boardlist);
+	}
 	
 	
 	
-//	private Map<String, Object> createGetBoardListMap(String type, int Page) {
-//		Map<String, Object> map = new HashMap<String, Object>();
-//		map.put("type", type);
-//		map.put("index", Page);
-//		return map;
-//	}
+	private Map<String, Object> createGetBoardListMap(String type, int Page) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("type", type);
+		map.put("index", Page);
+		return map;
+	}
 	
 	
 	
-//	private List<BoardRespDto> createBoardListRespDtos(List<Board> boardList) {
-//		List<BoardRespDto> boardListRespDtos = new ArrayList<BoardRespDto>();
-//		boardList.forEach(board -> {
-//			boardListRespDtos.add(board.toBoardEntity());
-//		});
-//		return boardListRespDtos;
-//	}
+	private List<BoardRespDto> createBoardListRespDtos(List<Board> boardList) {
+		List<BoardRespDto> boardListRespDtos = new ArrayList<BoardRespDto>();
+		boardList.forEach(board -> {
+			boardListRespDtos.add(board.toBoardEntity());
+		});
+		return boardListRespDtos;
+	}
 	
 }

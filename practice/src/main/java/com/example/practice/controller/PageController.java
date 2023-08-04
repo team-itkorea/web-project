@@ -1,10 +1,6 @@
 package com.example.practice.controller;
 
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -28,16 +24,6 @@ public class PageController {
 	public String main() {
 		return "Nam/main";
 	}
-	
-	@GetMapping("/auth/user/logout")
-    public String logout(HttpServletRequest request, HttpServletResponse response) {
-        HttpSession session = request.getSession(false);
-        if (session != null) {
-            // 세션 무효화
-            session.invalidate();
-        }
-        return "redirect:/";
-    }
 	
 	@GetMapping("/user")
 	public @ResponseBody String user() {
@@ -73,9 +59,9 @@ public class PageController {
 	   return "Nam/boardwrite";
    }
    
-   @GetMapping("/qna/write")
-   public String qnaWriteForm() {
-	   return "Lim/qna";
+   @GetMapping("/board/notice")
+   public String boardNotice() {
+	   return "Nam/notice";
    }
    
 	

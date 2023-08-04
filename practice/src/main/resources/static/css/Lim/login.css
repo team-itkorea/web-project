@@ -10,6 +10,11 @@
 
 /* body { position: fixed;  } */
 
+#wrap {
+     width: 100%;
+}
+
+
 .inside {
     max-width: 500px;
     margin: 0px auto;
@@ -203,14 +208,19 @@ h1 {
     display: flex;
     justify-content: space-between;
 
-   
-
 }
 
 .login-text a {
     font-family: 'NanumSquareRound';
     font-size: 15px;
     color: #222222;
+}
+
+.login-text p {
+	font-family: 'NanumSquareRound';
+    font-size: 15px;
+    color: #222222;	
+    cursor: pointer;
 }
 
 hr {
@@ -230,10 +240,12 @@ hr {
 
 #modal {
     position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -251,6 +263,14 @@ hr {
     background-color: #fff;
 
     border-radius: 5px;
+}
+
+.modal-body i {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 999;
 }
 
 /* <<<<<<<<<< 아이디 찾기 >>>>>>>>>>>> */
@@ -275,17 +295,6 @@ hr {
     font-size: 16px;
     font-family: 'NanumSquareRound';
     font-weight: 800;
-}
-
-.find-id img {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-
-    width: 15px;
-    height: 15px;
-
-    cursor: pointer;
 }
 
 .find-modal {
@@ -458,18 +467,6 @@ hr {
     font-size: 16px;
     font-family: 'NanumSquareRound';
     font-weight: 800;
-}
-
-
-.find-password img {
-    position: absolute;
-    top: 10%;
-    right: 5%;
-
-    width: 15px;
-    height: 15px;
-
-    cursor: pointer;
 }
 
 .find-modal-password {
