@@ -4,7 +4,6 @@ load("/program/")
 
 function load(uri) {
 	$.ajax({
-		async: false,
 		type: "GET",
 		url: uri + programTheme,
 		dataType: "json",
@@ -12,23 +11,25 @@ function load(uri) {
 			getProgram(response.data)
 		},
 		error: (error) => {
-			console.log(error)
+            console.log(error)
+            alert("실패")
 		}
 	})
 }
 
 function getProgram(program) {
-	const tbody = document.querySelector("tbody")
-	tbody.innerHTML = ""
-	program.forEach(notice => {
+	const tbody = document.querySelector(".contents")
+	tbody.innerHTML = ''
+	program.forEach(db => {
 		tbody.innerHTML += `
-			<tr class="notice-row">
-	            <td>${notice.noticeCode}</td>
-	            <td>${notice.noticeTitle}</td>
-	            <td>${notice.userId}</td>
-	            <td>${notice.createDate}</td>
-	            <td>${notice.noticeCount}</td>
-	        </tr>
+			<div class="content">
+	            <div class="img-section">
+					<img src="file:///C:/upload/program/${db.fileName}" alt="Image">
+				</div>
+				<div class="txt-section">
+					<h3 class="program-name">${db.theme} ${db.title}</h3>
+				</div>
+	        </div>
 		`
 	})
 }

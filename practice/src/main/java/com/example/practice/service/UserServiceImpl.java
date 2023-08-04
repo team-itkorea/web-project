@@ -23,8 +23,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean getProgramList(String theme) {
+		
+		
+		
 		return false;
 	}
+	
 	@Override
 	public boolean checkUseremail(UseremailCheckReqDto useremailCheckReqDto) throws Exception {
 		
