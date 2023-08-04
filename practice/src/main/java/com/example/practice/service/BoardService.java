@@ -15,6 +15,6 @@ public interface BoardService {
 	
 	
 	
-//	public List<BoardRespDto> getBoardList(String type, int page) throws Exception; 
+	public List<BoardRespDto> getBoardList(String type, int page) throws Exception; 
 
 }

@@ -59,5 +59,10 @@ public class PageController {
 	   return "Nam/boardwrite";
    }
    
+   @GetMapping("/board/notice")
+   public String boardNotice() {
+	   return "Nam/notice";
+   }
+   
 	
 }

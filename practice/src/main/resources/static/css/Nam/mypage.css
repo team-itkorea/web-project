@@ -13,7 +13,7 @@
 }
 
 #wrap {
-    width: 100%;
+     width: 100%;
 }
 
 /* >>>>>> header 부분 <<<<<< */
@@ -109,17 +109,17 @@
     box-sizing: border-box;
 }
 
-.section-info p {
-    margin-bottom: 20px;
+.click-bar {
+	width: 70px;
+	height: 20px;
+	margin-bottom: 20px;
+    cursor: pointer;
 }
 
-.section-info a {
-    color: #555;
+.pink-underline {
+    border-bottom: 2px solid #f39f92;
 }
 
-.section-info a:hover {
-    border-bottom: 2px solid pink;
-}
 
 .login-info {
     width: 500px;
@@ -184,6 +184,13 @@
     height: 1150px;
     border-radius: 5px;
     background-color: #fff;
+}
+
+.modal-main i {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    cursor: pointer;
 }
 
 .modal-main h5 {
@@ -329,6 +336,7 @@ select.box:nth-child(1) {
     border: 1px solid #000;
     margin-top: 60px;
     cursor: pointer;
+    background-color: #fff;
 }
 
 .confirm-button:hover {

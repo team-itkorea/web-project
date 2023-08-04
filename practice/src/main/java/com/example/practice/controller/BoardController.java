@@ -31,7 +31,7 @@ import lombok.RequiredArgsConstructor;
 public class BoardController {
 	
 	
-	 private final BoardServiceImpl boardService;
+	 private final BoardService boardService;
 
 	    @PostMapping("/board/writepro")
 	    public ResponseEntity<?> boardWritePro(@RequestBody BoardReqDto boardReqDto) {

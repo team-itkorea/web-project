@@ -16,7 +16,7 @@
 	  		now()
 	  	)
 	</insert>
-	<!-- <select id="getBoardList" parameterType="hashmap" resultType="com.example.practice.user.Board">
+	<select id="getBoardList" parameterType="hashmap" resultType="com.example.practice.user.Board">
 		select
 			title,
 			content,
@@ -24,6 +24,6 @@
 		from
 			board
 		
-	</select> -->
+	</select>
 	
 </mapper>

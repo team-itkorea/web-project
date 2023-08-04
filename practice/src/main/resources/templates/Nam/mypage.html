@@ -36,7 +36,7 @@
                 <p><a href="">위시 리스트</a></p>
                 <p><a href="">취소 조회</a></p>
                 <p><a href="">1:1 문의</a></p>
-                <p><a href="">정보 수정</a></p>
+                <p class="user-modify"><a href="">정보 수정</a></p>
                 <p><a href="">회원탈퇴</a></p>
             </div>
             <div class="login-info">
@@ -59,86 +59,88 @@
         </footer>
     </div>
 
-    <!-- 모달창 -->
-    <div class="usermodify-form">
-        <div class="modal-main">
-            <h5>정보 수정</h5>
-            <div class="section">
-                <div class="profile-area">
-                    <img src="/static/img/profile.png" alr="" />
+<!-- 모달창 -->
+<div class="usermodify-form">
+    <div class="modal-main">
+        <i class="fa-solid fa-xmark fa-lg ibutton"></i>
+        <h5>정보 수정</h5>
+        <div class="section">
+            <div class="profile-area">
+                <img src="/static/img/profile.png" alt="" />
+            </div>
+            <div class="user-email-form">
+                <input type="text" title="이메일" id="userEamil" placeholder=" 이메일 또는 아이디" class="email-form">
+            </div>
+            <div class="user-name-form">
+                <div class="input">
+                    <p>이름</p>
                 </div>
-                <div class="user-email-form">
-                    <input type="text" title="이메일" id="userEamil" placeholder=" 이메일 또는 아이디" class="email-form">
+                <input type="text" title="이름"
+                id="userName" placeholder=" 이름" class="name-form">
+            </div>
+            <div class="user-gender-form">
+                <div class="input">
+                    <p>성별</p>
                 </div>
-                <div class="user-name-form">
-                    <div class="input">
-                        <p>이름</p>
+                <div class="gender-select">
+                    <div class="man">
+                        <input type="radio" name="name1" class="radio-man" checked>
+                         <span style="margin-left: 6px;">남자</span>
                     </div>
-                    <input type="text" title="이름"
-                    id="userName" placeholder=" 이름" class="name-form">
+                    <div class="woman">
+                        <input type="radio" name="name1" class="radio-woman">
+                        <span style="margin-left: 6px;">여자</span>
+                    </div>    
                 </div>
-                <div class="user-gender-form">
-                    <div class="input">
-                        <p>성별</p>
-                    </div>
-                    <div class="gender-select">
-                        <div class="man">
-                            <input type="radio" name="name1" class="radio-man" checked>
-                             <span style="margin-left: 6px;">남자</span>
-                        </div>
-                        <div class="woman">
-                            <input type="radio" name="name1" class="radio-woman">
-                            <span style="margin-left: 6px;">여자</span>
-                        </div>    
-                    </div>
+            </div>
+            <div class="user-phone-form">
+                <div class="input">
+                    <p>연락처</p>
                 </div>
-                <div class="user-phone-form">
-                    <div class="input">
-                        <p>연락처</p>
-                    </div>
-                    <input type="text" title="연락처"
-                    id="userPhoneNumber" placeholder=" 연락처" class="phone-form">
+                <input type="text" title="연락처"
+                id="userPhoneNumber" placeholder=" 연락처" class="phone-form">
+            </div>
+            <div class="user-address-form">
+                <div class="input">
+                    <p>주소</p>
                 </div>
-                <div class="user-address-form">
-                    <div class="input">
-                        <p>주소</p>
-                    </div>
-                    <input type="text" title="주소"
-                    id="userAddress" placeholder=" 주소" class="address-form" style="border-bottom: none;">
-                    <input type="text" title="주소"
-                    id="userAddress" placeholder=" 주소" class="address-form">
+                <input type="text" title="주소"
+                id="userAddress" placeholder=" 주소" class="address-form" style="border-bottom: none;">
+                <input type="text" title="주소"
+                id="userAddress" placeholder=" 주소" class="address-form">
+            </div>
+            <div class="user-birth-form">
+                <div class="input">
+                    <p>생년월일</p>
                 </div>
-                <div class="user-birth-form">
-                    <div class="input">
-                        <p>생년월일</p>
-                    </div>
-                    <div class="birth-info">
-                        <select name="year" id="year" class="box"></select>
-                        <select name="month" id="month" class="box"></select>
-                        <select name="day" id="day" class="box"></select>
-                    </div>
+                <div class="birth-info">
+                    <select name="year" id="year" class="box"></select>
+                    <select name="month" id="month" class="box"></select>
+                    <select name="day" id="day" class="box"></select>
                 </div>
-                <div class="confirm-button"><p>확인</p></div>
-                <!-- 소셜 로그인 -->
-                <div class="social-login">
-                    <div class="input" style="margin-top: 30px;">
-                        <p>소셜로그인</p>
-                    </div>
-                    <div class="naver-connect">
-                        <img src="/static/img/naver.png" alt/>
-                        <p>네이버 연결</p>
-                    </div>
-                    <div class="google-connect">
-                        <img src="/static/img/google.png" alt/>
-                        <p>Google 연결</p>
-                    </div>
-                    <div class="kakao-connect">
-                        <img src="/static/img/kakao.png" alt/>
-                        <p>카카오 연결</p>
-                    </div>
+            </div>
+            <div class="confirm-button"><p>확인</p></div>
+            <!-- 소셜 로그인 -->
+            <div class="social-login">
+                <div class="input" style="margin-top: 30px;">
+                    <p>소셜로그인</p>
+                </div>
+                <div class="naver-connect">
+                    <img src="/static/img/naver.png" alt/>
+                    <p>네이버 연결</p>
+                </div>
+                <div class="google-connect">
+                    <img src="/static/img/google.png" alt/>
+                    <p>Google 연결</p>
+                </div>
+                <div class="kakao-connect">
+                    <img src="/static/img/kakao.png" alt/>
+                    <p>카카오 연결</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 </body>
 </html>
