@@ -11,6 +11,7 @@
 	  		0,
 	  		#{user_name},
 	  		#{user_email},
+	  		#{oauth2_id},
 	  		#{user_password},
 	  		#{user_address},
 	  		#{user_phone},
