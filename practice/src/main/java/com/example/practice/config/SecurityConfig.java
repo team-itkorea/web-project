@@ -9,10 +9,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.example.practice.auth.AuthFailureHandler;
+import com.example.practice.auth.PrincipalOauth2UserService;
+
+import lombok.RequiredArgsConstructor;
 
 @Configuration		// Spring의 설정 클래스로 지정
 @EnableWebSecurity	// Spring Security를 활성화
+@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	private final PrincipalOauth2UserService principalOauth2UserService;
 	
 //	   @Bean
 //	   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -43,6 +49,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	        .loginProcessingUrl("/auth/signin")
 	        .defaultSuccessUrl("/")
 	        .failureHandler(new AuthFailureHandler());
+//	        .and()
+//			.oauth2Login()
+//			.userInfoEndpoint()
+//			.userService(principalOauth2UserService)
+//			.and()
+//			.defaultSuccessUrl("/");
 	}
 	
 
