@@ -1,25 +1,12 @@
 package com.example.practice.controller;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-//import com.example.practice.auth.PrincipalDetailsService;
-import com.example.practice.dto.SignupReqDto;
-import com.example.practice.service.UserService;
-
-import lombok.RequiredArgsConstructor;
 
 @Controller
 public class PageController {
-	
 
-	
 	@GetMapping({"", "/"})
 	public String main() {
 		return "Nam/main";

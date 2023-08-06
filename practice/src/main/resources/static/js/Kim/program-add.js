@@ -11,6 +11,7 @@ function getProgramData() {
 	formData.append("option", option)
 
 		$.ajax({
+			async: false,
 			type: "POST",
 			url: "/admin/add/submit",
 			data: formData,
