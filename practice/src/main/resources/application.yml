@@ -33,4 +33,4 @@ mybatis:
   - /mappers/*.xml
   
 file:
-  path: C:\upload
+  path: ./src/main/resources/static/upload/
