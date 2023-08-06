@@ -74,11 +74,9 @@ public class AuthController {
 	@GetMapping("/principal")
 	public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails) {
 		if(principalDetails == null) {
-			System.out.println(principalDetails + "확인 2");
 			return ResponseEntity.badRequest().body(new CMRespDto<>(-1,"principal is null",null));
 			
 		}
-		System.out.println(principalDetails + "확인1");
 		return ResponseEntity.ok(new CMRespDto<>(1,"success load",principalDetails.getUser()));
 	}
 	
@@ -86,22 +84,23 @@ public class AuthController {
 	public ResponseEntity<?> userInfo(@PathVariable int userCode, @RequestBody UpdateUserReqDto updateUserReqDto) {
 		boolean status = false;
 		updateUserReqDto.setUser_code(userCode);
-		System.out.println(status+ "확인1" + updateUserReqDto + "확인1");
 		try {
 			status = userService.updateUser(updateUserReqDto);
 		} catch (Exception e) {
-			System.out.println(updateUserReqDto + "확인 2");
 			e.printStackTrace();
 			return ResponseEntity.ok().body(new CMRespDto<>(-1, "회원가입 실패",status));
 		}
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "회원가입 성공",status));
 	}
 	
-	@DeleteMapping("/auth/userdelet/{userCode}")
+	@DeleteMapping("/user/mypage/userdelete/{userCode}")
 	public ResponseEntity<?> userdelet(@PathVariable int userCode){
 		boolean status = false;
+		System.out.println(userCode + "확인1");
 		try {
 			status = userService.removeUser(userCode);
+			System.out.println(userCode + "확인2");
+			System.out.println(status + "확인3");
 		} catch (Exception e) {
 			e.printStackTrace();
 			return ResponseEntity.ok().body(new CMRespDto<>(-1,"failed",status));

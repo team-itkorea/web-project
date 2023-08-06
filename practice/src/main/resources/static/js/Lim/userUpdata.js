@@ -8,6 +8,7 @@ function getUserData() {
                 const user = response.data;
                 displayUserInfo(user);
                 resolve(user.user_code); // userCode를 반환해줍니다.
+                mypageusername(response.data.user_name);
             },
             error: (error) => {
                 console.log(error);
@@ -16,6 +17,14 @@ function getUserData() {
         });
     });
 }
+
+function mypageusername(user_name) {
+    const mypagename = document.querySelector(".introduce");
+    if (mypagename) {
+        mypagename.innerHTML = `<h3>${user_name}님 안녕하세요</h3><p>누적 구매금액: 0</p>`;
+    }
+}
+
 
 function displayUserInfo(user) {
     // 사용자 정보를 가져와서 해당 HTML 요소들에 값으로 넣어줍니다.
@@ -40,7 +49,7 @@ function displayUserInfo(user) {
     const [year, month, day] = user.user_birth.split(', ');
     let month2 = month;
     document.getElementById('year').value = year;
-    document.getElementById('month').value = month2.substr(0, month2.length - 1);
+    document.getElementById('month').value = month2;
     document.getElementById('day').value = day;
 
     return userCode;
@@ -96,3 +105,43 @@ function confirmButtonClick(userCode, userInfo) {
         },
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	const userDeletButton = document.querySelector(".drop-user-now");
+	
+	function deleteUser(userCode) {
+    $.ajax({
+        type: "delete",
+        url: `/auth/user/mypage/userdelete/${userCode}`,
+        async: true, // 비동기 처리
+        dataType: "json",
+        success: (response) => {
+            alert("회원탈퇴되었습니다.")
+            window.location.href = "/";
+        },
+        error: errorMessage
+    	});
+	}
+		function errorMessage(request, status, error) {
+		    alert("요청실패");
+		    console.log(request.status);
+		    console.log(request.responseText);
+		    console.log(error);
+		}
+			userDeletButton.onclick = () => {
+				 getUserData().then((userCode) => {
+				     if (userCode) {
+				         deleteUser(userCode);
+		         }
+    		});
+	};
+
+})
+
+
+
+
+
+
+
+

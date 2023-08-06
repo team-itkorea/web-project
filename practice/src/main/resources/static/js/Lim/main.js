@@ -39,13 +39,14 @@ jQuery(document).ready(function () {
 
 function logout() {
     $.ajax({
-		async: false,
+		/*async: false,*/
         type: "GET",
         url: "/auth/user/logout",
         contentType: "application/json",
         success: (response) => {
             console.log("로그아웃 성공!");
             alert("로그아웃 되었습니다.")
+            showLoggedOutUI();
             location.replace("/templates/Nam/main.html");
         },
         error: (error) => {

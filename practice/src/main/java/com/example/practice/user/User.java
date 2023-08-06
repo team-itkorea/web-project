@@ -23,4 +23,5 @@ public class User {
 	private String user_birth;
 	private String user_profile_img;
 	private String user_role;
+	private String user_provider;
 }
