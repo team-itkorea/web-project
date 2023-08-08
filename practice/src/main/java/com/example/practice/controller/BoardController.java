@@ -44,19 +44,17 @@ public class BoardController {
 			}
 	    	return ResponseEntity.ok().body(new CMRespDto<>(1, "성공", status));
 	    }
-	    
-		@GetMapping("/board/noticemain")
-		public ResponseEntity<?> getBoardList(@PathVariable String type, @RequestParam int page) {
-			List<BoardRespDto> list = null;
-			try {
-				list = boardService.getBoardList(type, page);
-				System.out.println(list + "확인");
-			} catch (Exception e) {
-				e.printStackTrace();
-				return ResponseEntity.ok().body(new CMRespDto<>(-1, page+ "page list fail to load", list));
-			}
-			return ResponseEntity.ok().body(new CMRespDto<>(1, page + "page list success to load", list));
-		}
+//	@GetMapping("/board/notice")
+//	public ResponseEntity<?> getBoardList(@PathVariable String type, @RequestParam int page) {
+//		List<BoardRespDto> list = null;
+//		try {
+//			list = boardService.getBoardList(type, page);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return ResponseEntity.ok().body(new CMRespDto<>(-1, page+ "page list fail to load", list));
+//		}
+//		return ResponseEntity.ok().body(new CMRespDto<>(1, page + "page list success to load", list));
+//	}
 	
 	
 	
