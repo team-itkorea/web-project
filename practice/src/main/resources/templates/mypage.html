@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/mypage.css"  />
+    <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/js/Lim/userUpdata.js"></script>
+    <script type="text/javascript" src="/static/js/Nam/mypage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <header class="header-inner">
+                <nav class="nav">
+                    <div><a href="/templates/nam/brand.html">BRAND</a></div>
+                    <div><a href="/templates/kim/program.html">PROGRAM</a></div>
+                    <div><a href="/templates/koo/mate.html">WELL MATE</a></div>
+                    <div><a href="#">WELLNESS ITEM</a></div>
+                    <div><a href="#">CONTACT</a></div>
+                </nav>
+                <div class="logo"><a href="/templates/nam/main.html"><img src="/static/img/logo.png" alt=""></a></div>
+                <nav class="login">
+                    <p><a href="#">로그인</a></p>
+                    <p><a href="#">마이페이지</a></p>
+                    <div class="bar-img"><i class="fa-solid fa-bars"></i></div>
+                </nav>
+            </header>
+        </header>
+        
+        <section id="section">
+            <div class="section-info">
+                <p class="click-bar" >주문조회</p>
+                <p class="click-bar" style="width: 90px;">위시 리스트</p>
+                <p class="click-bar">취소 조회</p>
+                <p class="click-bar">1:1 문의</p>
+                <p class="user-modify click-bar">정보 수정</p>
+                <p class="user-drop-click click-bar">회원탈퇴</p>
+            </div>
+            <div class="login-info">
+                <div class="profile">
+                    <img src="/static/img/profile.png" alt="" />
+                    <div class="introduce">
+                        <h3>${user_name}님 안녕하세요</h3>
+                        <p>누적 구매금액: ${program_price}원</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <h5>주문조회</h5>
+                </div>
+            </div>
+        </section>
+
+        <!-- 하단부분 -->
+        <footer id="footer">
+            <div class="footer-img"><img src="/static/img/footer.png"  alt="" /></div>
+        </footer>
+    </div>
+
+    <!-- 회원 수정 모달창 -->
+    <div class="usermodify-form">
+        <div class="modal-main">
+        	<i class="fas fa-thin fa-xmark fa-lg ibutton" ></i>
+            <h5>정보 수정</h5>
+            <div class="section">
+                <div class="profile-area">
+                    <img src="/static/img/profile.png" alt="" />
+                </div>
+                <div class="user-email-form">
+                    <input type="text" title="이메일" id="userEmail" placeholder=" 이메일" class="email-form" readonly="readonly">
+                    
+                    
+                </div>
+                <div class="user-name-form">
+                    <div class="input">
+                        <p>이름</p>
+                    </div>
+                    <input type="text" title="이름"
+                    id="userName" placeholder=" 이름" class="name-form">
+                </div>
+                <div class="user-gender-form">
+                    <div class="input">
+                        <p>성별</p>
+                    </div>
+                    <div class="gender-select">
+                        <div class="man">
+                            <input type="radio" id="userGender1" value="0" name="name1" class="radio-man" checked>
+                             <span style="margin-left: 6px;">남자</span>
+                        </div>
+                        <div class="woman">
+                            <input type="radio" id="userGender2" value="1"   name="name1" class="radio-woman">
+                            <span style="margin-left: 6px;">여자</span>
+                        </div>    
+                    </div>
+                </div>
+                <div class="user-phone-form">
+                    <div class="input">
+                        <p>연락처</p>
+                    </div>
+                    <input type="text" title="연락처"
+                    id="userPhoneNumber" placeholder=" 연락처" class="phone-form">
+                </div>
+                <div class="user-address-form">
+                    <div class="input">
+                        <p>주소</p>
+                    </div>
+                    <input type="text" title="주소"
+                    id="userAddress1" placeholder=" 주소" class="address-form" style="border-bottom: none;">
+                    <input type="text" title="주소"
+                    id="userAddress2" placeholder=" 주소" class="address-form">
+                </div>
+                <div class="user-birth-form">
+                    <div class="input">
+                        <p>생년월일</p>
+                    </div>
+                    <div class="birth-info">
+                        <select name="year" id="year" class="box"></select>
+                        <select name="month" id="month" class="box"></select>
+                        <select name="day" id="day" class="box"></select>
+                    </div>
+                </div>
+                <button class="confirm-button"><p>확인</p></button>
+                <!-- 소셜 로그인 -->
+                <div class="social-login">
+                    <div class="input" style="margin-top: 30px;">
+                        <p>소셜로그인</p>
+                    </div>
+                    <div class="naver-connect">
+                        <img src="/static/img/naver.png" alt/>
+                        <p>네이버 연결</p>
+                    </div>
+                    <div class="google-connect">
+                        <img src="/static/img/google.png" alt/>
+                        <p>Google 연결</p>
+                    </div>
+                    <div class="kakao-connect">
+                        <img src="/static/img/kakao.png" alt/>
+                        <p>카카오 연결</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 회원 탈퇴 모달창 -->
+    <div class="userdrop-form">
+        <div class="userdrop-main">
+            <h5>회원탈퇴</h5>
+            <p>가입된 회원정보가 모두 삭제됩니다. 작성하신 게시물은 삭제되지 않습니다.<br/>
+                탈퇴 후 같은 계정으로 재가입 시 기존에 가지고 있던 적립금은 복원되지 않으며, 
+                사용<br />및 다운로드했던 쿠폰도 사용 불가능합니다.
+                <br/><strong>회원 탈퇴를 진행하시겠습니까?</strong>
+            </p>
+            <div class="drop-button">
+                <button type="button" class="cancel">취소</button>
+                <button type="button" class="drop-user-now">탈퇴하기</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

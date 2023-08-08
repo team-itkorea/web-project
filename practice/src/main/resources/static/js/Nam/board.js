@@ -1,4 +1,3 @@
-
 const textArea = document.querySelector(".textarea");
 const titleText = document.querySelector(".titletext");
 
@@ -28,4 +27,26 @@ function getData() {
 		}
 	});
 }
+
+$(document).ready(function() {
+    const pageNumber = document.querySelector(".page-number");
+	const noticeContent = document.querySelector(".notice-content");
+
+    $.ajax({
+        type: "GET",
+        url: "/board/notice", // 엔드포인트 URL
+        data: { type: pageNumber, page: noticeContent }, // 요청 파라미터
+        success: function(response) {
+            if (response.code === 1) {
+                var list = response.data; // 게시판 목록 데이터
+                // 여기서 list를 화면에 표시하거나 가공하는 작업을 수행
+            } else {
+                console.error("Failed to load board list.");
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error("AJAX request failed:", error);
+        }
+    });
+});
 	
