@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/Koo/notice-main.css"  />
     <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/src/main/resources/static/js/koo/noticemain.js"></script>
+    <script src="/src/main/resources/static/js/koo/noticewrite.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -38,7 +38,7 @@
             <h3>공지사항</h3>
             <div class="notice-inner">
                 <div class="search-bar">
-                    <button type="button" class="write-now" id="admin"><a href="/notice/write">공지 쓰기</a></button>
+                    <button type="button" class="write-now"><a href="/notice/write">공지 쓰기</a></button>
                     <input type="text" title="검색" placeholder="검색하세요" id="search" class="search-form">
                     <button class="search-button"><i class="fa-solid fa-magnifying-glass fa-2xs"></i></button>
                 </div>
@@ -81,15 +81,5 @@
             <div class="footer-img"><img src="/static/img/footer.png"  alt="" /></div>
         </footer>
     </div>
-    <script>
-  // 이 부분에서 현재 사용자의 로그인 상태를 판단하는 로직을 추가해야 합니다.
-  let isLoggedIn = true; // 예시로 false로 설정해두었습니다. 실제로는 사용자 정보 등을 기반으로 판단해야 합니다.
-  
-  // 만약 사용자가 로그인되어 있지 않다면 버튼을 숨김
-  if (!isLoggedIn) {
-    var adminButton = document.getElementById("admin");
-    adminButton.style.display = "none";
-  }
-</script>
 </body>
 </html>

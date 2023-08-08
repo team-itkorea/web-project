@@ -24,13 +24,9 @@ public class NoticeServiceImpl implements NoticeService {
 	@Override
 	public int addNotice(AddNoticeReqDto addNoticeReqDto) throws Exception {
 		
-		System.out.println(addNoticeReqDto);
-		System.out.println(addNoticeReqDto.getIr1());
+		Notice notice = null;
 		
-		
-//		Notice notice = null;
-		
-		Notice notice = Notice.builder()
+		notice = Notice.builder()
 				.notice_title(addNoticeReqDto.getNoticeTitle())
 				.user_code(addNoticeReqDto.getUserCode())
 				.notice_content(addNoticeReqDto.getIr1())
