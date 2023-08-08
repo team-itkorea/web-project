@@ -16,7 +16,16 @@
         console.log("code : " + code)
         for (const option of optionArray) {
             console.log("option : " + option)
-    }
+        }
+        
+        function like() {
+			$.ajax({
+				type: "POST",
+				url: "api/insert"
+				
+			})
+		}
+        
     </script>
     <style>
         .header-title-state p {
