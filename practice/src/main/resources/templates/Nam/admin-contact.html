@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어드민 관리 페이지</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/admin.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
+    <script src="/static/js/Nam/admin.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+        <div class="category">
+            <div class="logo">
+                <img src="/static/img/logo02.png" alt=""/>
+            </div>
+            <section class="navi-box">
+                <ul>
+                    <li>유저관리</li>
+                    <ul class="sub">
+                        <li><a href="/templates/Nam/admin.html">사용자 관리</a></li>
+                    </ul>
+                    <li>프로그램관리</li>
+                    <ul class="sub">
+                        <li><a href="/templates/Nam/admin-leisure.html">레저</a></li>
+                        <li><a href="/templates/Nam/admin-wellness.html">웰니스</a></li>
+                    </ul>
+                    <li>문의관리</li>
+                    <ul class="sub">
+                        <li><a href="/templates/Nam/admin-contact.html">상품 문의</a></li>
+                    </ul>
+                    <li>비회원 관리</li>
+                    <ul class="sub">
+                        <li><a href="/templates/Nam/admin-nonuser.html">프로그램 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">입점 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">협업 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">기업 및 단체 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">파트너쉽 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">기타 문의</a></li>
+                    </ul>
+                </ul>
+            </section>      
+        </div>
+        <div class="header">
+            <h2>상품 문의</h2>
+        </div>
+          
+        <section class="notice">
+            <!-- board list area -->
+            <div id="board-list">
+                <div class="container">
+                    <table class="board-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="th-num">번호</th>
+                                <th scope="col" class="th-title">제목</th>
+                                <th scope="col" class="th-date">등록일</th>
+                                <th scope="col" class="th-date">삭제</th>
+                                <th scope="col" class="th-date">수정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <th>
+                                    <a href="">[공지사항] 개인정보 처리방침 변경안내처리방침</a>
+                                </th>
+                                <td>2017.07.13</td>
+                                <td><i class="fa-regular fa-trash-can"></i></td>
+                                <td><i class="fa-regular fa-pen-to-square"></i></td>
+                            </tr>
+            
+                            <tr>
+                                <td>2</td>
+                                <th><a href="">공지사항 안내입니다. 이용해주셔서 감사합니다</a></th>
+                                <td>2017.06.15</td>
+                                <td><i class="fa-regular fa-trash-can"></i></td>
+                                <td><i class="fa-regular fa-pen-to-square"></i></td>
+                            </tr>
+            
+                            <tr>
+                                <td>1</td>
+                                <th><a href="">공지사항 안내입니다. 이용해주셔서 감사합니다</a></th>
+                                <td>2017.06.15</td>
+                                <td><i class="fa-regular fa-trash-can"></i></td>
+                                <td><i class="fa-regular fa-pen-to-square"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>
