@@ -20,7 +20,7 @@ submitButton.addEventListener('click', () => {
         success: (response) => {
             console.log(response.data);
             alert("등록완료");
-            location.href = '/contact';
+            location.href = '/notice/main';
         },
         error: (error) => {
             console.log("요청 실패");

@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,19 +27,19 @@ public class NoticeRestController {
 	private final NoticeService noticeService;
 	
 	@PostMapping("/write")
-	public ResponseEntity<?> addNotice(AddNoticeReqDto addNoticeReqDto) {
+	public ResponseEntity<?> addNotice(@RequestBody AddNoticeReqDto addNoticeReqDto) {
 		
 		boolean noticeCode = false;
-		System.out.println(addNoticeReqDto + "---1--");
+//		System.out.println(addNoticeReqDto + "---1--");
 		try {
 			noticeCode = noticeService.addNotice(addNoticeReqDto);
-			System.out.println(addNoticeReqDto + "---2---");
+//			System.out.println(addNoticeReqDto + "---2---");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println(addNoticeReqDto+"---3---");
+//			System.out.println(addNoticeReqDto+"---3---");
 			return ResponseEntity.internalServerError().body(new CMRespDto<>(-1, "Failed", noticeCode));
 		}
-		System.out.println(addNoticeReqDto+"---4---");
+//		System.out.println(addNoticeReqDto+"---4---");
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "complete creation", noticeCode));
 	}
 	

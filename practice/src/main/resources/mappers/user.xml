@@ -19,6 +19,7 @@
 	  		#{user_birth},
 	  		#{user_profile_img},
 	  		#{user_role},
+	  		#{user_provider},
 	  		now(),
 	  		now()
 	  	)

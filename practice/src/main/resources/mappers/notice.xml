@@ -4,15 +4,14 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.example.practice.user.NoticeRepository">
-	<insert id="addNotice" parameterType="com.example.practice.user.Notice">
+	<insert id="saveNotice" parameterType="com.example.practice.user.Notice">
 	insert into
-		notice_mst
+		notice
 	values(
 		0,
 		#{notice_title},
-		#{user_code},
+		0,
 		#{notice_content},
-		#{notice_count},
 		now(),
 		now()
 	);
