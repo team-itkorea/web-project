@@ -31,8 +31,12 @@ public class Program {
 	
 	public ProgramListRespDto toListDto() {
 		return ProgramListRespDto.builder()
+				.code(program_code)
 				.theme(program_theme)
 				.title(program_title)
 				.fileName(program_imgUrl_1).build();
 	}
+	
+	
+	
 }
