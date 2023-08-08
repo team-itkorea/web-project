@@ -19,6 +19,7 @@
 	  		#{user_birth},
 	  		#{user_profile_img},
 	  		#{user_role},
+	  		#{user_provider},
 	  		now(),
 	  		now()
 	  	)
@@ -53,4 +54,18 @@
 		where
 			user_code = #{user_code}
 	</delete>
+	
+    <select id="findByNameAndUserPhone" parameterType="map" resultType="com.example.practice.user.User">
+        SELECT * FROM user
+        WHERE user_name = #{userName} AND user_phone = #{userPhone}
+    </select>
+    
+    <update id="updateUserPassword" parameterType="com.example.practice.user.User">
+	    UPDATE
+	     user
+	    SET
+	     user_password = #{user_password}
+	    WHERE user_code = #{user_code};
+	</update>
+    
 </mapper>

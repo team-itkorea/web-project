@@ -21,49 +21,49 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class NoticeRestController {
 	
-	private final NoticeService noticeService;
+//	private final NoticeService noticeService;
 	
-	@PostMapping("")
-	public ResponseEntity<?> addNotice(AddNoticeReqDto addNoticeReqDto) {
-		
-		int noticeCode = 0;
-		try {
-			noticeCode = noticeService.addNotice(addNoticeReqDto);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return ResponseEntity.internalServerError().body(new CMRespDto<>(-1, "Failed", noticeCode));
-		}
-		
-		return ResponseEntity.ok().body(new CMRespDto<>(1, "complete creation", noticeCode));
-	}
-	
-	@GetMapping("/{noticeCode}")
-	public ResponseEntity<?> getNotice(@PathVariable int noticeCode) {
-		
-		GetNoticeRespDto getNoticeRespDto = null;
-		try {
-			getNoticeRespDto = noticeService.getNotice(null, noticeCode);
-			if(getNoticeRespDto == null) {
-				return ResponseEntity.badRequest().body(new CMRespDto<>(-1, "datebase failed", null));
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			return ResponseEntity.internalServerError().body(new CMRespDto<>(-1, "datebase error", null));
-		}
-		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", getNoticeRespDto));
-	}
-	
-	@GetMapping("/list/{page}")
-	public ResponseEntity<?> getNoticeList(@PathVariable int page, @RequestParam String searchFlag, @RequestParam String searchValue) {
-		List<GetNoticeListRespDto> listDto = null;
-		try {
-			listDto = noticeService.getNoticeList(page, searchFlag, searchValue);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return ResponseEntity.internalServerError().body(new CMRespDto<>(-1, "database error", listDto));
-		}
-		
-		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", listDto));
-	}
+//	@PostMapping("")
+//	public ResponseEntity<?> addNotice(AddNoticeReqDto addNoticeReqDto) {
+//		
+//		int noticeCode = 0;
+//		try {
+//			noticeCode = noticeService.addNotice(addNoticeReqDto);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return ResponseEntity.internalServerError().body(new CMRespDto<>(-1, "Failed", noticeCode));
+//		}
+//		
+//		return ResponseEntity.ok().body(new CMRespDto<>(1, "complete creation", noticeCode));
+//	}
+//	
+//	@GetMapping("/{noticeCode}")
+//	public ResponseEntity<?> getNotice(@PathVariable int noticeCode) {
+//		
+//		GetNoticeRespDto getNoticeRespDto = null;
+//		try {
+//			getNoticeRespDto = noticeService.getNotice(null, noticeCode);
+//			if(getNoticeRespDto == null) {
+//				return ResponseEntity.badRequest().body(new CMRespDto<>(-1, "datebase failed", null));
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return ResponseEntity.internalServerError().body(new CMRespDto<>(-1, "datebase error", null));
+//		}
+//		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", getNoticeRespDto));
+//	}
+//	
+//	@GetMapping("/list/{page}")
+//	public ResponseEntity<?> getNoticeList(@PathVariable int page, @RequestParam String searchFlag, @RequestParam String searchValue) {
+//		List<GetNoticeListRespDto> listDto = null;
+//		try {
+//			listDto = noticeService.getNoticeList(page, searchFlag, searchValue);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return ResponseEntity.internalServerError().body(new CMRespDto<>(-1, "database error", listDto));
+//		}
+//		
+//		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", listDto));
+//	}
 
 }

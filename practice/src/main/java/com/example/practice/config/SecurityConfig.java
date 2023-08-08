@@ -43,12 +43,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	        .antMatchers("/user/**").authenticated()
 //	        .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
 	        .anyRequest().permitAll()
+	        
 	        .and()
 	        .formLogin()
 	        .loginPage("/auth/signin")
 	        .loginProcessingUrl("/auth/signin")
 	        .defaultSuccessUrl("/")
 	        .failureHandler(new AuthFailureHandler());
+	        
 //	        .and()
 //			.oauth2Login()
 //			.userInfoEndpoint()

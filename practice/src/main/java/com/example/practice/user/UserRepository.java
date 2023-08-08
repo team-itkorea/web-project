@@ -14,4 +14,8 @@ public interface UserRepository {
 	public int remove(int userCode) throws Exception;
 	
 	public User findOAuth2UserByUseremail(String oauth2_id) throws Exception;
+	
+	public User findByNameAndUserPhone(String userName, String userPhone) throws Exception;
+	
+	public int updateUserPassword(User user) throws Exception;
 }
