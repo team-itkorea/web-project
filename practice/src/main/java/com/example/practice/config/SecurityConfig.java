@@ -55,6 +55,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //			.userService(principalOauth2UserService)
 //			.and()
 //			.defaultSuccessUrl("/");
+	        http.headers().frameOptions().sameOrigin();
 	}
 	
 

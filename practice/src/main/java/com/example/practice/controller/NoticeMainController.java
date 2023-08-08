@@ -16,7 +16,7 @@ public class NoticeMainController {
 		return "/Koo/notice-main";
 	}
 	
-//	admin만 공지 쓸 수 있게할 예정
+//	admin만 공지 쓸 수 있게할 예정	
 	@GetMapping("/write")
 	public String noticewrite() {
 		return "/Koo/noticewrite";

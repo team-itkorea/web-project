@@ -39,4 +39,5 @@
     <fullyQualifiedTypeName name="org.springframework.security.oauth2.core.user.OAuth2User"/>
     <fullyQualifiedTypeName name="com.example.practice.auth.PrincipalOauth2UserService"/>
     <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.example.practice.user.Notice"/>
 </qualifiedTypeNameHistroy>

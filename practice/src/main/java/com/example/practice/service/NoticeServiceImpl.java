@@ -22,19 +22,23 @@ public class NoticeServiceImpl implements NoticeService {
 	private final NoticeRepository noticeRepository;
 
 	@Override
-	public int addNotice(AddNoticeReqDto addNoticeReqDto) throws Exception {
+	public boolean addNotice(AddNoticeReqDto addNoticeReqDto) throws Exception {
 		
-		Notice notice = null;
+		System.out.println(addNoticeReqDto);
+		System.out.println(addNoticeReqDto.getIr1());
 		
-		notice = Notice.builder()
-				.notice_title(addNoticeReqDto.getNoticeTitle())
-				.user_code(addNoticeReqDto.getUserCode())
-				.notice_content(addNoticeReqDto.getIr1())
-				.build();
 		
-		noticeRepository.saveNotice(notice);
-		
-	return notice.getNotice_code();
+//		Notice notice = null;
+//		
+//		Notice notice = Notice.builder()
+//				.notice_title(addNoticeReqDto.getNoticeTitle())
+//				.user_code(addNoticeReqDto.getUserCode())
+//				.notice_content(addNoticeReqDto.getIr1())
+//				.build();
+//		
+//		noticeRepository.saveNotice(notice);
+//		
+	return noticeRepository.saveNotice(addNoticeReqDto.toEntity()) > 0;
 	}
 
 	@Override
