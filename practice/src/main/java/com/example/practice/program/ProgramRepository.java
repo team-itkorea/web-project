@@ -9,4 +9,8 @@ public interface ProgramRepository {
 	public List<Program> GetProgramList(String theme) throws Exception;
 	
 	public boolean addProgram(Program program) throws Exception;
+	
+	public Program GetProgramDetail(int code) throws Exception;
+	
+	
 }
