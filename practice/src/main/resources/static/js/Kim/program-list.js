@@ -1,33 +1,36 @@
 let programTheme = location.pathname.substring(location.pathname.lastIndexOf("/") + 1)
 
-load("/program/")
+load("/api/program/")
 
 function load(uri) {
 	$.ajax({
-		type: "GET",
+		type: "POST",
 		url: uri + programTheme,
 		dataType: "json",
-		success: (response) => {
+		success: function(response) {
+			console.log(response)
 			getProgram(response.data)
 		},
-		error: (error) => {
+		error: function (error) {
             console.log(error)
-            alert("실패")
-		}
+        }
 	})
+	
 }
 
-function getProgram(program) {
+
+
+function getProgram(list) {
 	const tbody = document.querySelector(".contents")
 	tbody.innerHTML = ''
-	program.forEach(db => {
+	list.forEach(program => {
 		tbody.innerHTML += `
 			<div class="content">
 	            <div class="img-section">
-					<img src="file:///C:/upload/program/${db.fileName}" alt="Image">
+					<img src="/static/upload/program/${program.fileName}" alt="Image">
 				</div>
 				<div class="txt-section">
-					<h3 class="program-name">${db.theme} ${db.title}</h3>
+					<h3 class="program-name">[${program.theme}] ${program.title}</h3>
 				</div>
 	        </div>
 		`
