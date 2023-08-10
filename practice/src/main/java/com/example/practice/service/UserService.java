@@ -1,6 +1,5 @@
 package com.example.practice.service;
 
-import com.example.practice.dto.ResetPassword;
 import com.example.practice.dto.SignupReqDto;
 import com.example.practice.dto.UpdateUserReqDto;
 import com.example.practice.dto.UseremailCheckReqDto;
@@ -15,6 +14,4 @@ public interface UserService {
 	public boolean updateUser(UpdateUserReqDto updateUserReqDto ) throws Exception; 
 	
 	public boolean removeUser (int userCode) throws Exception;
-	
-	public boolean resetPassword(ResetPassword resetPassword) throws Exception;
 }

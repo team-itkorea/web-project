@@ -28,23 +28,12 @@
 	
 	<select id="GetProgramList" parameterType="String" resultType="com.example.practice.program.Program">
 		SELECT
-			program_code,
+			program_imgUrl_1,
 			program_theme,
-			program_title,
-			program_imgUrl_1
+			program_title
 		FROM
 			program
 		WHERE
 			program_theme = #{theme}
 	</select>
-	
-	<select id="GetProgramDetail" parameterType="Integer" resultType="com.example.practice.program.Program">
-		SELECT
-			*
-		FROM
-			program
-		WHERE
-			program_code = #{code}
-	</select>
-	
 </mapper>

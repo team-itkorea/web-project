@@ -14,6 +14,6 @@ public interface BoardService {
 	public boolean createBoard(BoardReqDto boardReqDto) throws Exception; 
 	
 	
-	
-	public List<BoardRespDto> getBoardList(String type, int page) throws Exception; 
+	public List<BoardRespDto> getBoardList(int page) throws Exception; 
+
 }

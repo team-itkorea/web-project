@@ -10,21 +10,21 @@ function getProgramData() {
 
 	formData.append("option", option)
 
-	$.ajax({
-		async: false,
-		type: "POST",
-		url: "/admin/add/submit",
-		data: formData,
-		processData: false,
-		contentType: false,
-		success: (response) => {
-			alert("추가 완료")
-		},
-		error: (error) => {
-			alert("추가 실패")
-		}
-	});
-}
+		$.ajax({
+			async: false,
+			type: "POST",
+			url: "/admin/add/submit",
+			data: formData,
+			processData: false,
+			contentType: false,
+			success: (response) => {
+				alert("추가 완료")
+			},
+			error: (error) => {
+				alert("추가 실패")
+			}
+		});
+	}
 	// const imgUrl_1 = document.querySelector('.a').files[0]
 	// const imgUrl_2 = document.querySelector('.b').files[0]
 

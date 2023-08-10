@@ -77,15 +77,6 @@ public class ProgramServiceImpl implements ProgramService {
 		
 		return list;
 	}
-
-	@Override
-	public Program getProgramDetail(int code) throws Exception {
-		Program program = null;
-		
-		program = programRepository.GetProgramDetail(code);
-		
-		return program;
-	}
 	
 	
 

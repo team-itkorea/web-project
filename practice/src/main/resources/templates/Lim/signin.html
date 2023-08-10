@@ -109,13 +109,13 @@
 	
 	                <p>아이디 찾을 방법을 선택해주세요.</p>
 	
-	               <!--  <div class="email-find">
+	                <div class="email-find">
 	                    <div class="check-radio">
 	                        <input type="radio" name="name1" class="radio-email" checked>
 	                        <h4>가입한 이메일로 찾기</h4>
 	                    </div>
 	                    <input type="text" title="이메일" id="userEamil" placeholder=" 이메일 또는 아이디" class="email-input-first" style="border-bottom: 1px solid #dbdbdb;">  
-	                </div> -->
+	                </div>
 	                <div class="phone-find-area">
 	                    <div class="check-radio-area">
 	                        <input type="radio" name="name1" class="radio-phone" >
@@ -124,7 +124,7 @@
 	                </div>
 	                <div class="phone-find">
 	                    <div class="input-area">
-	                        <input type="text" title="이메일" id="userEamil" placeholder=" 이름" class="email-input">
+	                        <input type="text" title="이메일" id="userEamil" placeholder=" 이름 또는 닉네임" class="email-input">
 	                        <input type="text" title="휴대폰 번호" id="usernumber" placeholder=" 휴대폰 번호" class="phone-input">
 	                    </div>
 	                </div>
@@ -154,43 +154,20 @@
 	                <button class="final-find-password">
 	                    <p>비밀번호 찾기</p>
 	                </button>
-	                <p id="resetPasswordResult" style="display: none;"></p>
 	            </div>
-	            <!-- 비밀번호 재설정 모달창 -->
-				<div class="reset-password-modal">
-				    <div class="reset-password-content">
-				        <h2>비밀번호 재설정</h2>
-				        <input type="password" id="newPassword" placeholder="새 비밀번호">
-				        <input type="password" id="confirmPassword" placeholder="비밀번호 확인">
-				        <button class="reset-password-button">재설정</button>
-				    </div>
-				</div> 
 	        </div>
 	    </div>
 	</div>
     <script>
-    window.addEventListener('load', function() {
-    	
-    	const resetPasswordModal = document.querySelector(".reset-password-modal");
-    	resetPasswordModal.style.display = 'none';
-    	
-    	/* $(".final-find-password").click(function () {
-    		$(".reset-password-modal").show();
-    		$(".id-find").hide();
-    		$(".final-find-password").hide();
-    	}); */
-    
 	    $(".find-id-click").click(function () {
 	      $(".find-id").show();
 	      $(".find-password").hide();
 	      $(".phone-find").hide();
-	      $(".reset-password-modal").hide();
 	    });
 	
 	    $(".find-password-click").click(function () {
 	      $(".find-password").show();
 	      $(".find-id").hide();
-	      $(".reset-password-modal").hide();
 	    });
 	    
 	    $(".radio-phone").click(function () {
@@ -211,10 +188,8 @@
 	
 	    $(".find-id-password").click(function () {
 	      $("#modal").show();
-   	 	});
-	});
+	    });
     </script>
-    <script type="text/javascript" src="/static/js/Lim/signin.js"></script>
 
 </body>
 </html>

@@ -9,14 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.example.practice.dto.AddProgramReqDto;
 import com.example.practice.dto.CMRespDto;
 import com.example.practice.dto.ProgramListRespDto;
-import com.example.practice.program.Program;
 import com.example.practice.service.ProgramService;
 
 import lombok.RequiredArgsConstructor;
@@ -34,29 +30,13 @@ public class ProgramController {
 	
 	@GetMapping("/program/leisure")
 	public String loadLeisure() {
+		System.out.println("컨트롤러 실행");
 		return "Kim/program-theme";
 	}
 	
 	@GetMapping("/program/wellness")
 	public String loadWellness() {
 		return "Kim/program-theme";
-	}
-	
-	@GetMapping("/program/{theme}/detail")
-	public ModelAndView loadLeisureDetail(@PathVariable("theme") String theme, @RequestParam("code") int code) {
-		ModelAndView mav = new ModelAndView("Kim/program-detail");
-		
-		Program program = null;
-		
-		try {
-			program = programService.getProgramDetail(code);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		mav.addObject("program", program);
-		
-		return mav;
 	}
 	
 	@GetMapping("/admin/add")
@@ -66,27 +46,17 @@ public class ProgramController {
 	
 	@PostMapping("/admin/add/submit")
 	public String programAdd(@ModelAttribute AddProgramReqDto addProgramReqDto) {
-		List<String> optionList = addProgramReqDto.getOption();
+		List<String> opts = addProgramReqDto.getOption();
 		
-		String optionString = String.join(",", optionList);
-		
-		addProgramReqDto.setOpt(optionString);
-		
-		try {
-			programService.addprogram(addProgramReqDto);
-		} catch (Exception e) {
-			e.printStackTrace();
+		for (String string : opts) {
+			addProgramReqDto.setOpt(string);
+			try {
+				programService.addprogram(addProgramReqDto);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
-		
-//		for (String string : opts) {
-//			addProgramReqDto.setOpt(string);
-//			try {
-//				programService.addprogram(addProgramReqDto);
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
-		return "redirect:/admin";
+		return "redirect:/admin/add";
 	}	
 	
 //	@GetMapping("/program/{theme}")
