@@ -1,5 +1,6 @@
 package com.example.practice.controller.auth;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -34,6 +35,9 @@ import com.example.practice.dto.UseremailCheckReqDto;
 import com.example.practice.handler.aop.annotation.Log;
 import com.example.practice.handler.aop.annotation.Timer;
 import com.example.practice.handler.aop.annotation.ValidCheck;
+import com.example.practice.mypage.Heart;
+import com.example.practice.mypage.Order;
+import com.example.practice.mypage.OrderRepository;
 import com.example.practice.service.UserService;
 import com.example.practice.user.User;
 import com.example.practice.user.UserRepository;
@@ -48,8 +52,9 @@ public class AuthController {
 	private final UserService userService;
 	private final PrincipalDetailsService principalDetailsService;
 	private final UserRepository userRepository;
+	private final OrderRepository orderRepository;
 	
-	@PostMapping("/signup") //로그인
+	@PostMapping("/signup") //회원가입
 	public ResponseEntity<?> signup(@RequestBody @Valid SignupReqDto signupReqDto, BindingResult bindingResult ) {
 		boolean status = false;
 		try {
@@ -67,7 +72,7 @@ public class AuthController {
 	@ValidCheck
 	@Log
 	@Timer
-	@GetMapping("/useremail")   
+	@GetMapping("/useremail")   // 이메일 중복 체크
 	public ResponseEntity<?> checkUseremail(@Valid UseremailCheckReqDto useremailCheckReqDto, BindingResult bindingResult) {
 		boolean status = false;
 		try {
@@ -80,7 +85,7 @@ public class AuthController {
 		return ResponseEntity.ok().body(new CMRespDto<>(1,"회원가입 가능 여부",status));
 	}
 	
-	@GetMapping("/principal")
+	@GetMapping("/principal") //회원 정보 가져오기
 	public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails) {
 		if(principalDetails == null) {
 			return ResponseEntity.badRequest().body(new CMRespDto<>(-1,"principal is null",null));
@@ -89,7 +94,7 @@ public class AuthController {
 		return ResponseEntity.ok(new CMRespDto<>(1,"success load",principalDetails.getUser()));
 	}
 	
-	@PutMapping("/user/mypage/modification/{userCode}")
+	@PutMapping("/user/mypage/modification/{userCode}") //회원 정보 수정
 	public ResponseEntity<?> userInfo(@PathVariable int userCode, @RequestBody UpdateUserReqDto updateUserReqDto) {
 		boolean status = false;
 		updateUserReqDto.setUser_code(userCode);
@@ -102,7 +107,7 @@ public class AuthController {
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "회원가입 성공",status));
 	}
 	
-	@DeleteMapping("/user/mypage/userdelete/{userCode}")
+	@DeleteMapping("/user/mypage/userdelete/{userCode}") //회원탈퇴
 	public ResponseEntity<?> userdelet(@PathVariable int userCode){
 		boolean status = false;
 		System.out.println(userCode + "확인1");
@@ -135,7 +140,7 @@ public class AuthController {
 		}
 	}
 	
-	@PostMapping("/checkEmail")
+	@PostMapping("/checkEmail") // 비밀번호 찾기전 이메일이 있는지 없는지 확인
 	public ResponseEntity<?> userEmailcheck(@RequestBody UseremailCheckReqDto useremailCheckReqDto){
 		
 		String userEmail = useremailCheckReqDto.getUserEmail();
@@ -154,7 +159,7 @@ public class AuthController {
 		}
 	}
 	
-	@PostMapping("/resetPassword")
+	@PostMapping("/resetPassword") //비밀번호 찾기
     public ResponseEntity<?> resetPassword(@RequestBody @Valid ResetPassword resetPassword, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
         	System.out.println(resetPassword+"확인1");
@@ -176,6 +181,46 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error occurred while resetting password");
         }
     }
-	  
+	
+	@GetMapping("/programData") //주문조회
+	public ResponseEntity<List<Order>> mypageProgram(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+	    if (principalDetails == null) {
+	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+	    }
+
+	    int user_code = principalDetails.getUser().getUser_code(); 
+	    System.out.println(user_code);
+	    List<Order> cancelOrders1 = orderRepository.findAll(user_code, 1);
+	    System.out.println(cancelOrders1+"확인제발");
+	    return ResponseEntity.ok(cancelOrders1);
+	}
+	
+	@GetMapping("/cancelOrders") //취소 조회
+	public ResponseEntity<List<Order>> getCancelOrders(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+	    if (principalDetails == null) {
+	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+	    }
+
+	    int user_code = principalDetails.getUser().getUser_code(); // 로그인된 사용자의 이메일
+	    System.out.println(user_code);
+	    List<Order> cancelOrders = orderRepository.findOrdersByUserAndFlagNum(user_code, 1);
+	    System.out.println(cancelOrders+"확인제발");
+	    return ResponseEntity.ok(cancelOrders);
+	}
+	
+	@GetMapping("/heartList") //좋아요 리스트 가져오기
+	public ResponseEntity<List<Heart>> getheartList(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+	    if (principalDetails == null) {
+	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+	    }
+
+	    int user_code = principalDetails.getUser().getUser_code(); // 로그인된 사용자의 이메일
+	    System.out.println(user_code);
+	    List<Heart> heartList = orderRepository.findHeart(user_code);
+	    System.out.println(heartList+"확인제발");
+	    return ResponseEntity.ok(heartList);
+	}
+	
+	
 	
 }

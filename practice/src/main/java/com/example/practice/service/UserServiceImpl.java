@@ -70,4 +70,9 @@ public class UserServiceImpl implements UserService {
 	    }
 		return true;
 	}
+	
+	@Override
+	public User getUserByCode(int userCode) throws Exception {
+		return userRepository.findByUserCode(userCode);
+	}
 }

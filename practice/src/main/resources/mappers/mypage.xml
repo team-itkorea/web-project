@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.example.practice.mypage.OrderRepository">
+	
+	<select id="findAll" parameterType="Integer" resultType="com.example.practice.mypage.Order">
+		SELECT
+			u.user_code,
+			p.program_code,
+			p.program_title,
+			p.program_imgUrl_1,
+			o.flag_code,
+			o.order_code
+		FROM
+			order_mst o
+			LEFT OUTER JOIN user u ON(o.user_code = u.user_code)
+			LEFT OUTER JOIN program p ON(o.program_code = p.program_code)
+		WHERE
+			u.user_code = #{user_code} and
+        	o.flag_code =1;
+	</select>
+	
+	<select id="findOrdersByUserAndFlagNum" parameterType="Integer" resultType="com.example.practice.mypage.Order">
+		SELECT
+			u.user_code,
+			p.program_code,
+			p.program_title,
+			p.program_imgUrl_1,
+			o.flag_code,
+			o.order_code
+		FROM
+			order_mst o
+			LEFT OUTER JOIN user u ON(o.user_code = u.user_code)
+			LEFT OUTER JOIN program p ON(o.program_code = p.program_code)
+		WHERE
+			u.user_code = #{user_code} and
+		    o.flag_code = 2;
+	</select>
+	
+	<select id="findHeart" parameterType="Integer" resultType="com.example.practice.mypage.Heart">
+		SELECT
+			h.heart_code,
+			u.user_code,
+			p.program_code,
+			p.program_title,
+			p.program_imgUrl_1
+		FROM
+			heart h
+			LEFT OUTER JOIN user u ON(h.user_code = u.user_code)
+			LEFT OUTER JOIN program p ON(h.program_code = p.program_code)
+		WHERE
+			u.user_code = #{user_code}
+	</select>
+	
+	<update id="updataOrderByOrderCode" parameterType="com.example.practice.mypage.Order">
+		UPDATE
+			order_mst
+		SET
+			flag_code = #{flag_code}
+		WHERE
+			order_code = #{order_code}
+	</update>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

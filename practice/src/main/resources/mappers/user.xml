@@ -67,5 +67,24 @@
 	     user_password = #{user_password}
 	    WHERE user_code = #{user_code};
 	</update>
+	
+	<select id="findAll"  resultType="com.example.practice.user.User">
+		SELECT
+			*
+		FROM
+			user
+		WHERE
+			user_role = 'ROLE_USER'
+		ORDER by
+			user_code DESC;
+	</select>
+	<select id="findByUserCode" parameterType="hashmap" resultType="com.example.practice.user.User">
+		select
+  			*
+	  	from
+	  		user
+	  	where
+			user_code = #{user_code}
+	</select>
     
 </mapper>

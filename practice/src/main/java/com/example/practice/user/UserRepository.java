@@ -1,5 +1,7 @@
 package com.example.practice.user;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -18,4 +20,8 @@ public interface UserRepository {
 	public User findByNameAndUserPhone(String userName, String userPhone) throws Exception;
 	
 	public int updateUserPassword(User user) throws Exception;
+	
+	public List<User> findAll() throws Exception;
+	
+	public User findByUserCode(int userCode) throws Exception;
 }

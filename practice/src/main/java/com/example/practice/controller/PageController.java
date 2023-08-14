@@ -45,8 +45,12 @@ public class PageController {
 	}
 	
 	@GetMapping("/admin")
-	public @ResponseBody String admin() {
-		return "admin";
+	public String admin() {
+		return "Nam/admin";
+	}
+	@GetMapping("/admin/userlist")
+	public String adminuser() {
+		return "Nam/admin-nonuser";
 	}
 
 	@GetMapping("/auth/signin")
@@ -76,6 +80,11 @@ public class PageController {
    @GetMapping("/board/notice")
    public String boardNotice() {
 	   return "Nam/notice";
+   }
+   
+   @GetMapping("/auth/agreement")
+   public String agreement() {
+	   return "Lim/agreement";
    }
    
 	
