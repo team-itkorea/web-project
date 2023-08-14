@@ -45,8 +45,18 @@ public class PageController {
 	}
 	
 	@GetMapping("/admin")
-	public @ResponseBody String admin() {
-		return "admin";
+	public String admin() {
+		return "Nam/admin";
+	}
+	
+	@GetMapping("/admin/contact-{category}")
+	public String adminContact() {
+		return "Nam/admin-contact";
+	}
+	
+	@GetMapping("/admin/contact/check-{contactCode}")
+	public String admincheck() {
+		return "koo/admin-contact-check";
 	}
 
 	@GetMapping("/auth/signin")

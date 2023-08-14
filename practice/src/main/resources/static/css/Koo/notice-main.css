@@ -130,7 +130,7 @@
 .search-bar {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;     
     align-items: center;
     height: 60px;
     padding-top: 100px;
@@ -146,11 +146,11 @@
 
 .search-button {
     box-sizing: border-box;
-    border: 1px 0px 0px 0px;
-    border-color: #ffffff;
+    border: 2px solid #ececec;
     width: 44px;
-    height: 44px;
+    height: 43.5px;
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 .search-bar p {
@@ -160,17 +160,19 @@
 .search-form {
     padding-left: 20px;
     margin-bottom: 5px;
+    /* margin-left: 982px; */
     width: 250px;
     height: 40px;
     border: 2px solid #ececec;
+    /* float: inline-end; */
+    outline: none;
 }
 
-.notice-list {
+/* .notice-list {
     width: 1400px;
     height: 630px;
     overflow: hidden;
     box-sizing: border-box;
-    /* display: flex; */
     align-items: center;
     padding: 20px 30px;
     font-size: 16px;
@@ -192,48 +194,57 @@
 .notice-list tr {
     width: 100%;
     display: flex;
+} */
+
+.notice-list {
+	width: 100%;	
+}
+
+.notice-list i {
+	cursor: pointer;
+}
+
+.notice-listlis td {
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 2px solid #ececec;
 }
 
 .notice-list td:nth-child(1) {
-    box-sizing: border-box;
-    border: 0px solid;
-    width: 160px;
+	color: #555;
+	width: 70px;
 }
 
 .notice-list td:nth-child(2) {
-    box-sizing: border-box;
-    border: 0px solid;
-    margin-left: 50px;
-    width: 790px;
-    text-align: left;
+	text-align: left;
+	padding-left: 50px;
+	box-sizing: border-box;
+	width: 500px;
 }
 
 .notice-list td:nth-child(3) {
-    box-sizing: border-box;
-    border: 0px solid;
-    margin-right: 45px;
-    float: right;
-    width: 100px;
-    text-align: center;
+	width: 100px;
+	box-sizing: border-box;
 }
 
 .notice-list td:nth-child(4) {
-    box-sizing: border-box;
-    border: 0px solid;
-    margin-right: 45px;
-    float: right;
-    width: 100px;
-    text-align: center;
+	width: 100px;
+	box-sizing: border-box;
 }
 
 .notice-list td:nth-child(5) {
-    box-sizing: border-box;
-    border: 0px solid;
-    /* margin-right: 45px; */
-    float: right;
-    width: 100px;
-    text-align: center;
+	width: 40px;
+	padding-right: 40px;
+	box-sizing: border-box;
 }
+
+.notice-list td:nth-child(6) {
+	width: 40px;
+	padding-right: 30px;
+	box-sizing: border-box;
+}
+
 
 .page-button {
     border: 0;
