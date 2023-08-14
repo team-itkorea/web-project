@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/nam/admin.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static/js/Nam/admin.js"></script>
+    <script src="/static/js/Nam/admin.js"></script>
     
 </head>
 <body>
@@ -18,15 +18,15 @@
                 <img src="/static/img/logo02.png" alt=""/>
             </div>
             <section class="navi-box">
-				<ul>
+                <ul>
                     <li>유저관리</li>
                     <ul class="sub">
                         <li><button type="button" onclick="goUserList()">사용자 관리</button></li>
                     </ul>
                     <li>프로그램관리</li>
                     <ul class="sub">
-                        <li><button type="button" onclick="goProgramList('l')">레저</button></li>
-                        <li><button type="button" onclick="goProgramList('w')">웰니스</button></li>
+                        <li><a href="/templates/Nam/admin-leisure.html">레저</a></li>
+                        <li><a href="/templates/Nam/admin-wellness.html">웰니스</a></li>
                     </ul>
                     <li>문의관리</li>
                     <ul class="sub">
@@ -34,12 +34,12 @@
                     </ul>
                     <li>비회원 관리</li>
                     <ul class="sub">
-                        <li><button type="button" onclick="a(1)">프로그램 문의</button></li>
-                        <li><button type="button" onclick="a(2)">입점 문의</button></li>
-                        <li><button type="button" onclick="a(3)">협업 문의</button></li>
-                        <li><button type="button" onclick="a(4)">기업 및 단체 문의</button></li>
-                        <li><button type="button" onclick="a(5)">파트너쉽 문의</button></li>
-                        <li><button type="button" onclick="a(6)">기타 문의</button></li>
+                        <li><a href="/templates/Nam/admin-contact.html">프로그램 문의</a></li>
+                        <li><a href="/templates/Nam/admin-contact.html">입점 문의</a></li>
+                        <li><a href="/templates/Nam/admin-contact.html">협업 문의</a></li>
+                        <li><a href="/templates/Nam/admin-contact.html">기업 및 단체 문의</a></li>
+                        <li><a href="/templates/Nam/admin-contact.html">파트너쉽 문의</a></li>
+                        <li><a href="/templates/Nam/admin-contact.html">기타 문의</a></li>
                     </ul>
                 </ul>
             </section>      

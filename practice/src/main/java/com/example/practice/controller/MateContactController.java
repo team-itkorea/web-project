@@ -30,22 +30,22 @@ public class MateContactController {
 		return "/Koo/contact";
 	}
 	
-	@GetMapping("/wellmate/1")
+	@GetMapping("/templates/Koo/well1.html")
 	public String wella() {
 		return "/Koo/well1";
 	}
 	
-	@GetMapping("/wellmate/2")
+	@GetMapping("/templates/Koo/well2.html")
 	public String wellb() {
 		return "/Koo/well2";
 	}
 	
-	@GetMapping("/wellmate/3")
+	@GetMapping("/templates/Koo/well3.html")
 	public String wellc() {
 		return "/Koo/well3";
 	}
 	
-	@GetMapping("/wellmate/4")
+	@GetMapping("/templates/Koo/well4.html")
 	public String welld() {
 		return "/Koo/well4";
 	}

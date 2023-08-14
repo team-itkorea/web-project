@@ -1,8 +1,5 @@
 const submitButton = document.getElementById('submitButton');
 
-let page = 1;
-load();
-
 submitButton.addEventListener('click', () => {
     // 선택된 라디오 버튼의 값을 가져옵니다.
 	const selectedRadioValue = document.querySelector('input[name="contact_category"]:checked').value;
@@ -48,75 +45,4 @@ submitButton.addEventListener('click', () => {
         }
     }); 
 });
-
-
-function load() {
-    $.ajax({
-        type: "GET",
-        url: `/admin/contact/list/${page}`,
-		dataType: "json", 
-        success: (response) => {
-            getNoticeList(response.data);
-            console.log(response);
-        },
-        error: (error) => {
-            console.log('Error:', error);
-        }
-    });
-	
-}
-
-function getNoticeList(data) {
-	const tbody = document.querySelector(".board-list")
-	tbody.innerHTML = ''
-	data.forEach(content => {
-		tbody.innerHTML += `
-            <tr>
-                <td>${content.contactCode}</th>
-                <th>${content.contactCategory}</th>
-                <td>${content.createDate.substring(0,10)}</th>
-                <td><i class="fa-regular fa-trash-can" data-content="${content.contactCode}"></i></td>
-                <td><i class="fa-regular fa-pen-to-square" data-content="${content.contactCode}"></i></td>
-            </tr>
-		`
-		})
-	  $(".board-list").on("click",".fa-regular.fa-trash-can", function() {
-      var contactCode = $(this).data("content");
-      console.log(contactCode);
-      
-	      $.ajax({
-			async: false,
-	        type: "delete",
-	        url: `/admin/contact/contactDelete/${contactCode}`,
-			dataType: "json", 
-	        success: (response) => {
-	            console.log(response);
-	            location.reload();
-	        },
-	        error: (error) => {
-	            console.log('Error:', error);
-	        }
-	    });
-	});
-}
-
-/*
-function a(category) {
-    window.location.href = "/admin/contact-" + category
-}
-
-
-	private int contactCode;
-	private String contactCategory;
-	private String etc;					//기타
-	private String nonUsername;	//이름
-	private String nonUserphone;	//연락처
-	private String nonUseremail;	//이메일
-	private String contactContent;	//내용
-	private String contactAagree;	//동의,미동의
-	private LocalDateTime createDate;
-
-*/
-
-
-
+    

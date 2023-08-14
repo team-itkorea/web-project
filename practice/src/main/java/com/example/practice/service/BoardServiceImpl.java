@@ -27,15 +27,23 @@ public class BoardServiceImpl implements BoardService {
 		
 		return boardRepository.save(boardReqDto.toEntityBoard()) > 0 ;
 	}
-
+	
 	@Override
-	public List<BoardRespDto> getBoardList(int page) throws Exception {
-		System.out.println( page + "확인");
-		int index = (page - 1) * 10;
-		List<Board> boardlist = boardRepository.getBoardList(index);
-		System.out.println(boardlist + "확인");
+	public List<BoardRespDto> getBoardList(String type, int page) throws Exception  {
+		List<Board> boardlist = boardRepository.getBoardList(createGetBoardListMap(type, page));
 		return createBoardListRespDtos(boardlist);
 	}
+	
+	
+	
+	private Map<String, Object> createGetBoardListMap(String type, int Page) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("type", type);
+		map.put("index", Page);
+		return map;
+	}
+	
+	
 	
 	private List<BoardRespDto> createBoardListRespDtos(List<Board> boardList) {
 		List<BoardRespDto> boardListRespDtos = new ArrayList<BoardRespDto>();

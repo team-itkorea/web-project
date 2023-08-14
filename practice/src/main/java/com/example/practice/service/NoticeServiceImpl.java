@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.practice.dto.AddNoticeReqDto;
 import com.example.practice.dto.GetNoticeListRespDto;
+import com.example.practice.dto.GetNoticeRespDto;
 import com.example.practice.user.Notice;
 import com.example.practice.user.NoticeRepository;
 
@@ -17,43 +18,67 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class NoticeServiceImpl implements NoticeService {
-
+	
 	private final NoticeRepository noticeRepository;
 
 	@Override
 	public boolean addNotice(AddNoticeReqDto addNoticeReqDto) throws Exception {
-		System.out.println(addNoticeReqDto + "확인");
-		return noticeRepository.saveNotice(addNoticeReqDto.toEntity()) > 0;
+		
+		System.out.println(addNoticeReqDto);
+		System.out.println(addNoticeReqDto.getIr1());
+		
+		
+//		Notice notice = null;
+//		
+//		Notice notice = Notice.builder()
+//				.notice_title(addNoticeReqDto.getNoticeTitle())
+//				.user_code(addNoticeReqDto.getUserCode())
+//				.notice_content(addNoticeReqDto.getIr1())
+//				.build();
+//		
+//		noticeRepository.saveNotice(notice);
+//		
+	return noticeRepository.saveNotice(addNoticeReqDto.toEntity()) > 0;
 	}
 
 	@Override
-	public List<GetNoticeListRespDto> getNoticeList(int page) throws Exception {
-		System.out.println( page + " :1확인");
+	public GetNoticeRespDto getNotice(String flag, int noticeCode) throws Exception {
+		GetNoticeRespDto getNoticeRespDto = null;
+		
+		Map<String, Object> reqMap = new HashMap<String, Object>();
+		reqMap.put("flag", flag);
+		reqMap.put("notice_code", noticeCode);
+		
+		List<Notice> notices = noticeRepository.getNotice(reqMap);
+		if(!notices.isEmpty()) {
+	        Notice firstNotice = notices.get(0);
+	        getNoticeRespDto = GetNoticeRespDto.builder()
+	                .noticeCode(firstNotice.getNotice_code())
+	                .noticeTitle(firstNotice.getNotice_title())
+	                .userCode(firstNotice.getUser_code())
+	                .userName(firstNotice.getUser_name())
+	                .noticeCount(firstNotice.getNotice_count())
+	                .noticeContent(firstNotice.getNotice_content())
+	                .build();
+		}
+		return getNoticeRespDto;
+	}
+
+	@Override
+	public List<GetNoticeListRespDto> getNoticeList(int page, String searchFlag, String searchValue) throws Exception {
+
 		int index = (page - 1) * 10;
-		List<Notice> noticelist = noticeRepository.getNoticeList(index);
-		System.out.println(noticelist + " :2확인");
-		return createBoardListRespDtos(noticelist);
-	}
-	
-	private List<GetNoticeListRespDto> createBoardListRespDtos(List<Notice> noticelist) {
-		List<GetNoticeListRespDto> noticeListRespDtos = new ArrayList<GetNoticeListRespDto>();
-		noticelist.forEach(notice -> {
-			noticeListRespDtos.add(notice.toListDto());
-		});
-		return noticeListRespDtos;
-	}
-
-	@Override
-	public boolean removeNotice(int noticeCode) throws Exception {
-		return noticeRepository.remove(noticeCode) > 0;
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("index", index);
+		map.put("search_flag", searchFlag);
+		map.put("search_value", searchValue == null ? "" : searchValue);
+		
+		List<GetNoticeListRespDto> list = new ArrayList<GetNoticeListRespDto>();
+		
+		noticeRepository.getNoticeList(map).forEach(notice -> {
+			list.add(notice.toListDto());
+		});		
+		return list;
 	}
 
-	@Override
-	public Notice getNoticeCode(int noticeCode) throws Exception {
-		System.out.println(noticeCode + " :2확인");
-		return noticeRepository.findNoticeCode(noticeCode);
-	}
-
-
-	
 }

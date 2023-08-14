@@ -27,14 +27,12 @@ public class AddProgramReqDto {
 	
 	private List<String> option;
 	
-	private int heart;
+	private String like;
 	private MultipartFile imgUrl_1;
 	private MultipartFile imgUrl_2;
 	
 	@JsonIgnore
 	private String opt;
-	@JsonIgnore
-	private int code;
 	
 	public Program toEntity() {
 		return Program.builder()
@@ -47,22 +45,6 @@ public class AddProgramReqDto {
 				.program_time(time)
 				.program_participants(participants)
 				.program_option(opt)
-				.program_heart(heart).build();
+				.program_like(like).build();
 	}
-	
-	public Program updateEntity() {
-		return Program.builder()
-				.program_code(code)
-				.program_title(title)
-				.program_price(price)
-				.program_info(info)
-				.program_place(place)
-				.program_schedule(schedule)
-				.program_time(time)
-				.program_participants(participants)
-				.program_option(opt)
-				.program_heart(heart).build();
-	}
-	
-	
 }

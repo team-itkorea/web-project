@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>어드민 관리 페이지</title>
     <link rel="stylesheet" type="text/css" href="/static/css/nam/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/static/css/nam/admin-koo.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/admin.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
     <script src="/static/js/Nam/admin.js"></script>
-    <script src="/static/js/koo/contact.js"></script>
+    
 </head>
 <body>
     <div id="wrap">
@@ -18,15 +18,15 @@
                 <img src="/static/img/logo02.png" alt=""/>
             </div>
             <section class="navi-box">
-				<ul>
+                <ul>
                     <li>유저관리</li>
                     <ul class="sub">
-                        <li><button type="button" onclick="goUserList()">사용자 관리</button></li>
+                        <li><a href="/templates/Nam/admin.html">사용자 관리</a></li>
                     </ul>
                     <li>프로그램관리</li>
                     <ul class="sub">
-                        <li><button type="button" onclick="goProgramList('l')">레저</button></li>
-                        <li><button type="button" onclick="goProgramList('w')">웰니스</button></li>
+                        <li><a href="/templates/Nam/admin-leisure.html">레저</a></li>
+                        <li><a href="/templates/Nam/admin-wellness.html">웰니스</a></li>
                     </ul>
                     <li>문의관리</li>
                     <ul class="sub">
@@ -34,18 +34,18 @@
                     </ul>
                     <li>비회원 관리</li>
                     <ul class="sub">
-                        <li><button type="button" onclick="a(1)">프로그램 문의</button></li>
-                        <li><button type="button" onclick="a(2)">입점 문의</button></li>
-                        <li><button type="button" onclick="a(3)">협업 문의</button></li>
-                        <li><button type="button" onclick="a(4)">기업 및 단체 문의</button></li>
-                        <li><button type="button" onclick="a(5)">파트너쉽 문의</button></li>
-                        <li><button type="button" onclick="a(6)">기타 문의</button></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">프로그램 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">입점 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">협업 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">기업 및 단체 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">파트너쉽 문의</a></li>
+                        <li><a href="/templates/Nam/admin-nonuser.html">기타 문의</a></li>
                     </ul>
                 </ul>
             </section>      
         </div>
         <div class="header">
-            <h2>비회원 문의</h2>
+            <h2>상품 문의</h2>
         </div>
           
         <section class="notice">
@@ -59,14 +59,14 @@
                                 <th scope="col" class="th-title">제목</th>
                                 <th scope="col" class="th-date">등록일</th>
                                 <th scope="col" class="th-date">삭제</th>
-                                <th scope="col" class="th-date">상세보기</th>
+                                <th scope="col" class="th-date">수정</th>
                             </tr>
                         </thead>
-                        <tbody class="board-list">
+                        <tbody>
                             <tr>
                                 <td>3</td>
                                 <th>
-                                    <a href="">rlxk</a>
+                                    <a href="">[공지사항] 개인정보 처리방침 변경안내처리방침</a>
                                 </th>
                                 <td>2017.07.13</td>
                                 <td><i class="fa-regular fa-trash-can"></i></td>

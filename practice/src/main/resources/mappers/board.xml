@@ -16,17 +16,13 @@
 	  		now()
 	  	)
 	</insert>
-	<select id="getBoardList" parameterType="Integer" resultType="com.example.practice.user.Board">
-		SELECT
-			board_code,
+	<select id="getBoardList" parameterType="hashmap" resultType="com.example.practice.user.Board">
+		select
 			title,
+			content,
 			create_date
-		FROM
+		from
 			board
-		order BY
-			board_code desc
-		LIMIT
-			#{index}, 10
 		
 	</select>
 	

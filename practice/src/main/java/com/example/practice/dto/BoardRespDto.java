@@ -8,7 +8,6 @@ import lombok.Data;
 @Builder
 @Data
 public class BoardRespDto {
-	private int boardCode;
 	private String boardTitle;
 	private String boardContent;
 	private LocalDateTime createDate;
