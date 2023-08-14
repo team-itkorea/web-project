@@ -20,4 +20,38 @@
 			now()
 		)
 	</insert>
+	
+	<select id="getContactList" parameterType="Integer" resultType="com.example.practice.user.Contact">
+		SELECT
+			*
+		from
+			contact
+		where
+			contact_category = '기타'
+		ORDER by
+			contact_code desc
+		limit
+			#{index}, 10
+	</select>
+	
+	<delete id="remove" parameterType="Integer">
+		delete
+		from
+			contact
+		where
+			contact_code = #{contact_code}
+	</delete>
+	
+	<select id="getCheckContact" parameterType="Integer" resultType="com.example.practice.user.Contact">
+			SELECT
+		contact_category,
+		etc,
+		non_userphone,
+		non_useremail,
+		contact_content
+	from
+		contact
+	where
+		contact_code = #{contact_code}
+	</select>
 </mapper>

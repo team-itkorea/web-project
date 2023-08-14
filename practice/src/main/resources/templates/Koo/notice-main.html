@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>여기가진짜공지사항</title>
+    <title>공지사항</title>
     <link rel="stylesheet" type="text/css" href="/static/css/nam/reset.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/Koo/notice-main.css"  />
     <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/src/main/resources/static/js/koo/noticewrite.js"></script>
+    <script type="text/javascript" src="/static/js/koo/noticewrite.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -23,8 +23,8 @@
                 </nav>
                 <div class="logo"><a href="/templates/nam/main.html"><img src="/static/img/logo.png" alt=""></a></div>
                 <nav class="login">
-                    <p><a href="#">로그인</a></p>
-                    <p><a href="#">마이페이지</a></p>
+                    <p><a href="/auth/signin">로그인</a></p>
+                    <p><a href="/auth/signup">회원가입</a></p>
                     <div class="bar-img"><i class="fa-solid fa-bars"></i></div>
                 </nav>
             </header>
@@ -35,30 +35,21 @@
             <div class="main-img">
                 <img src="/static/img/notice03.png">
             </div>
-            <h3>공지사항</h3>
             <div class="notice-inner">
                 <div class="search-bar">
-                    <button type="button" class="write-now"><a href="/notice/write">공지 쓰기</a></button>
+                    <button type="button" class="write-now" id="admin"><a href="/notice/write">공지 쓰기</a></button>
                     <input type="text" title="검색" placeholder="검색하세요" id="search" class="search-form">
-                    <button class="search-button"><i class="fa-solid fa-magnifying-glass fa-2xs"></i></button>
+                    <button type="button" class="search-button"><i class="fa-solid fa-magnifying-glass fa-2xs"></i></button>
                 </div>
                 <table class="notice-list">
-                    <tbody>
+                    <tbody class="notice-listlis">
                         <tr>
-                            <td>1</td>
-                            <td>공  지</td>
-                            <td>Admin</td>
-                            <td>2023-08-04</td>
-                            <td>13</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td>2</td>
-                            <td>공  지2</td>
-                            <td>Admin</td>
-                            <td>2022-11-01</td>
-                            <td>42</td>
+                            <td class="notice-num">123</td>
+                            <td class="notice-title">123</td>            
+                            <td class="username">123</td>
+                            <td class="notice-date">123</td>
+                            <td><i class="fa-regular fa-trash-can"></i></td>
+                            <td><button type="button"><a href="/notice/update"><i class="fa-regular fa-pen-to-square"></i></a></button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -81,5 +72,14 @@
             <div class="footer-img"><img src="/static/img/footer.png"  alt="" /></div>
         </footer>
     </div>
+    <script>
+  // 이 부분에서 현재 사용자의 로그인 상태를 판단하는 로직을 추가해야 합니다.
+//  let isLoggedIn = true; // 예시로 false로 설정해두었습니다. 실제로는 사용자 정보 등을 기반으로 판단해야 합니다.
+  
+  // 만약 사용자가 로그인되어 있지 않다면 버튼을 숨김
+//  if (!isLoggedIn) {
+//    var adminButton = document.getElementById("admin");
+ //   adminButton.style.display = "none";}
+</script>
 </body>
 </html>

@@ -9,3 +9,7 @@ function goProgramList(theme) {
 function a(category) {
     window.location.href = "/admin/contact-" + category
 }
+
+/*function update() {
+	window.location.href = "/notice/update"
+}*/

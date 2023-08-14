@@ -242,6 +242,7 @@
     border: 1px solid;
     border-radius: 21px 21px 21px 21px;
     background-color: #ffffff;
+    margin-bottom: 20px;
     width: 794px;
     height: 42px;
     transition: background-color 0.8s ease;
