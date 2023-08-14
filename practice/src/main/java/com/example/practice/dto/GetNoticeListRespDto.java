@@ -6,7 +6,6 @@ import lombok.Data;
 @Builder
 @Data
 public class GetNoticeListRespDto {
-
 	private int noticeCode;
 	private String noticeTitle;
 	private String username;

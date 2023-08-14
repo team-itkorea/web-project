@@ -22,10 +22,12 @@ public class Program {
 	private String program_schedule;
 	private String program_time;
 	private String program_participants;
+	private String create_date;
+	private String update_date;
 	
 	private String program_option;
 	
-	private String program_like;
+	private int program_heart;
 	private String program_imgUrl_1;
 	private String program_imgUrl_2;
 	
@@ -33,6 +35,7 @@ public class Program {
 		return ProgramListRespDto.builder()
 				.theme(program_theme)
 				.title(program_title)
-				.fileName(program_imgUrl_1).build();
+				.fileName(program_imgUrl_1)
+				.uploadDate(create_date).build();
 	}
 }

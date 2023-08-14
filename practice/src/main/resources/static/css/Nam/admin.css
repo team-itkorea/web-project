@@ -17,8 +17,9 @@
     padding: 50px 25px 0px 25px;
     text-align: center;
     box-sizing: border-box;
-    background-color: #29613a ;
+    background-color: #29613a;
 }
+
 .category img {
     width: 50%;
     text-align: center;
@@ -126,6 +127,8 @@
 .board-table thead tr th {
     font-weight: 800;
 }
+
+
 
 .board-table tbody tr {
     height: 50px;

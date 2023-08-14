@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.example.practice.heart.HeartRepository">
+	<select id="findHeart" parameterType="hashmap" resultType="com.example.practice.heart.Heart">
+		SELECT
+  			*
+	  	FROM
+	  		heart
+	  	WHERE
+	  		user_code = #{user_code} AND program_code = #{program_code}
+	</select>
+	
+ 	<insert id="createHeart" parameterType="hashmap">
+		INSERT INTO
+  			heart
+	  	VALUES(
+	  		0,
+	  		#{user_code},
+	  		#{program_code},
+	  		now(),
+	  		now()
+	  	)
+	</insert>
+	
+	<delete id="cancelHeart" parameterType="hashmap">
+		DELETE
+		FROM
+			heart
+		WHERE
+			user_code = #{user_code} AND program_code = #{program_code}
+	</delete>
+	
+	<select id="GetProgramDetail" parameterType="Integer" resultType="com.example.practice.program.Program">
+		SELECT
+			*
+		FROM
+			program
+		WHERE
+			program_code = #{code}
+	</select>
+
+</mapper>

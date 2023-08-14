@@ -9,4 +9,5 @@ public class ProgramListRespDto {
 	private String theme;
 	private String title;
 	private String fileName;
+	private String uploadDate;
 }
