@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <link rel="stylesheet" href="/static/css/Kim/header.css">
+    <link rel="stylesheet" href="/static/css/Kim/footer.css">
+    <script src="https://kit.fontawesome.com/0894ad155a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/js/Kim/program.js"></script>
+</head>
+<body>
+    <header id="header">
+        <header class="header-inner">
+            <nav class="nav">
+                <div><a href="#">BRAND</a></div>
+                <div><a href="#">PROGRAM</a></div>
+                <div><a href="#">WELL MATE</a></div>
+                <div><a href="#">WELLNESS ITEM</a></div>
+                <div><a href="#">CONTACT</a></div>
+            </nav>
+            <div class="logo"><img src="/static/images/logo.png" alt=""></div>
+            <nav class="login">
+                <p>로그인</p>
+                <p>마이페이지</p>
+                <div class="bar-img"><i class="fa-solid fa-bars"></i></div>
+            </nav>
+        </header>
+    </header>
+
+    <main id="main">
+        <div id="banner">
+            <p class="large">Program</p>
+            <p class="medium">일상과 여행사이의 웰니스 프로그램</p>
+            <hr width="5%" color="black" size="1">
+            <p class="small">삶의 균형을 주는 다양한 웰니스 프로그램으로</p>
+            <p class="small">일상과 여행 사이와 함께 나만의 웰니스를 찾기 위한 여정을 떠나보세요.</p>
+        </div>
+    
+        <div class="blank"></div>
+    
+        <div id="program1">
+            <div class="content">
+                <div class="content1" style="border: none;">
+                    <div class="title"><h2>일상 탐험</h2></div>
+                    <div class="write">
+                        <p>한 번쯤 해보고 싶었지만 망설였던,<br>
+                            잠시 바쁘다 보니 놓치고 있던 나를 더 나답게 만들어주는 시간.<br>
+                            다양한 영역의 웰니스 프로그램을 원데이 클래스로 경험해 보세요.
+                        </p>
+                    </div>
+                    <div class="arrow-container">
+                        <button type="button" onclick="goLeisure()">
+                            <i class="fa-solid fa-circle-arrow-right fa-4x"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="/templates/Kim/program-detail.html">
+                    <div class="content1">
+                        <div class="img-section1">
+                            <img src="/static/img/pic_1.png" alt="">
+                        </div>
+                        <div class="txt-section1">
+                            <h3 class="program-name">썬데이 뮤직 클럽</h3>
+                            <p class="program-tutor">웰 메이트 박신영</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/templates/Kim/program-detail.html">
+                    <div class="content1">
+                        <div class="img-section1">
+                            <img src="/static/img/pic_2.png" alt="">
+                        </div>
+                        <div class="txt-section1">
+                            <h3 class="program-name">제주 구좌 판화 클래스</h3>
+                            <p class="program-tutor">웰 메이트 오몽</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    
+        <div class="blank"></div>
+        <hr style="display: block; margin: auto;" width="94%" size="1px" color="black">
+        <div class="blank"></div>
+    
+        <div id="program2">
+            <div class="content">
+                <div class="content2" style="border: none;">
+                    <div class="title"><h2>웰니스 클럽</h2></div>
+                    <div class="write">
+                        <p>일상 속 건강한 웰니스 습관을 키울 수 있도록<br>
+                            3회 이상 진행되는 커리큘럼으로 구성되어 있어요.<br>
+                            일상 탐험가들과 함께 경험을 나누며 건강한 일상 습관을 만들어가요.
+                        <p>
+                    </div>
+                    <div class="arrow-container">
+                        <button type="button" onclick="goWellness()">
+                            <i class="fa-solid fa-circle-arrow-right fa-4x"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="content2">
+                    <div class="img-section2">
+                        <img src="/static/img/스크린샷 2023-07-12 200041.png" alt="">
+                    </div>
+                    <div class="txt-section2">
+                        <h3 class="program-name">&lt;웰니스 클럽&gt; 컬러로 탐험하는 나의 마음</h3>
+                        <p class="program-tutor">웰 메이트 이한님</p>
+                    </div>
+                </div>
+                <div class="content2" style="border: none;">
+                    <!-- <div class="img-section2">
+                        <img src="/images/스크린샷 2023-07-12 200041.png" alt="">
+                    </div>
+                    <div class="txt-section2">
+                        <h3 class="program-name">&lt;웰니스 클럽&gt; 컬러로 탐험하는 나의 마음</h3>
+                        <p class="program-tutor">웰 메이트 이한님</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    
+        <div class="blank"></div>
+    </main>
+    
+    <footer id="footer">
+        <div class="background-img"><img src="/static/images/footer.png"></div>
+    </footer>
+</body>
+</html>

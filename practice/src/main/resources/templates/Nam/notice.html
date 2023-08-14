@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="/static/css/nam/notice.css"  />
     <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/src/main/resources/static/js/Nam/board.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -43,13 +42,16 @@
                     <i class="fa-solid fa-magnifying-glass fa-2xs"></i>
                 </div>
                 <table class="notice-list">
-                    <tbody>
-                        <tr>
-                            <td>200</td>
-                            <td>친환경 여행 함께해요 World Environment Day</td>
-                            <td>2023-07-31</td>
-                        </tr>
-                    </tbody>
+					<thead>
+						<tr>
+							<th>코드</th>
+							<th>제목</th>
+							<th>날짜</th>
+						</tr>
+					</thead>
+					<tbody class="bbb">
+						
+					</tbody>
                 </table>
             </div>
             <div class="notice-search-button">
@@ -71,4 +73,5 @@
         </footer>
     </div>
 </body>
+    <script type="text/javascript" src="/static/js/Nam/board.js"></script>
 </html>

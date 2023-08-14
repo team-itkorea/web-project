@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+#header {
+    /* position: fixed; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 93px;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+    /* z-index: 9999; */
+}
+
+#header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 1500px;
+    
+}
+
+#header .nav {
+    display: flex;
+    width: 600px;
+    font-size: 17px;
+    color: #555;
+}
+
+#header .nav div {
+    width: 100px;
+    margin-right: 20px;
+    /* background-color: antiquewhite; */
+}
+
+#header .nav div:nth-child(1) {
+    width: 70px;
+}
+
+#header .nav div:nth-child(4) {
+    width: 150px;
+    text-align: center;
+}
+
+#header .nav a {
+    color: #555;
+}
+
+#header .logo {
+    width: 135px;
+    height: 93px;
+    margin-top: 35px;
+    margin-left: -480px;
+}
+
+#header .logo img {
+    width: 100%;
+}
+
+#header .login {
+    display: flex;
+}
+
+#header .login  p {
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+/* */
+.blank {
+    height: 50px;
+    background-color: white
+}
+
+#main {
+    margin-left: 25px;
+    margin-right: 25px;
+    height: auto;
+    background-color: white;
+    position: relative;
+}
+
+.summary {
+    display: flex;
+    height: 720px;
+    /* border: 1px solid; */
+}
+.summary-img {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+
+}
+.summary-img img {
+    /* display: inline-block; */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+
+    width: 620px;
+    height: 100%;
+    background-color: white;
+    
+    margin-left: 125px;
+    font-family: 'NanumSquareRound';
+}
+
+.item-header {
+    display: flex;
+    flex-direction: column;
+
+    height: 95px;
+    /* border-bottom: 1px solid rgb(221, 221, 221); */
+}
+
+.header-title-state {
+    height: 50px;
+}
+
+.header-price-share {
+    flex-grow: 1;
+}
+
+.program-price {
+    color: rgb(255, 136, 117);
+    font-weight: 100;
+}
+
+
+
+.item-info {
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.paragraph {
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+
+.item-table {
+    height: 200px;
+}
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: lighter;
+    color: #757575;
+    align-items: center;
+    border: 1px solid #ddd;
+    background-color: rgb(232, 232, 232);
+}
+td {
+    color: #555;
+    padding: 8px;
+    border: 1px solid #ddd;
+}   
+
+/* -------------------------------------- */
+
+.long {
+    height: auto;
+    overflow: visible;
+}   
+
+.three-button {
+    width: auto;
+    display: flex;
+
+    position: sticky;
+    top: 0px;
+
+    background-color: white;
+
+    height: 45px;
+}
+  
+.three-button button {
+    flex: 1;
+    background-color: white;
+    border: none;
+    color: rgb(89, 89, 89);
+    border-bottom: 0.1px solid rgb(213, 213, 213);
+    cursor: pointer;
+}
+
+.three-button button:hover {
+    color: rgb(252, 166, 181);
+    border-bottom: 0.1px solid rgb(252, 166, 181);
+}
+
+.detail {
+    display: flex;
+    justify-content: center;    
+}
+
+.big-img {
+    margin-top: 20px;
+    width: 68%;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.big-img img {
+	width: 100%;
+	height: 100%;
+}
+
+/* ------------------------------------------- */
+
+.finish {
+    font-family: 'NanumSquareRound';
+}
+
+.review {
+    height: auto;
+    background-color: white;
+    display: flex;
+}
+
+.review-left {
+    width: 85%;
+    height: 400px;
+    border: 1px solid gray;
+}
+
+.star-rate {
+    color: gold;
+    font-size: 20px;
+}
+
+.review-right {
+    flex: 1;
+    border: 1px solid gray;
+}
+
+.review-title {
+    height: 40px;
+}
+
+.finish button {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 12px;
+    border: 0.5px solid gray;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-container {
+    height: auto;
+    border: 0.5px solid gray;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.page-container button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 0.5px solid gray;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.finish button:hover, .page-container button:hover {
+    background-color: #000;
+    color: white;
+}

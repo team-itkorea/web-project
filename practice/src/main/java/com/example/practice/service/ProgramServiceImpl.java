@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import java.util.function.Predicate;
 
@@ -86,7 +87,30 @@ public class ProgramServiceImpl implements ProgramService {
 		
 		return program;
 	}
-	
-	
 
+	@Override
+	public boolean addHeart(int code) throws Exception {
+		return programRepository.addHeart(code);
+	}
+
+	@Override
+	public boolean subHeart(int code) throws Exception {
+		return programRepository.subHeart(code);
+	}
+
+	@Override
+	public boolean createOrder(Map<String, Integer> codes) {
+		return programRepository.createOrder(codes);
+	}
+
+	@Override
+	public boolean updateprogram(AddProgramReqDto addProgramReqDto) throws Exception {
+		Program programUpdateEntity = addProgramReqDto.updateEntity();
+		return programRepository.updateProgram(programUpdateEntity);
+	}
+
+	@Override
+	public boolean deleteprogram(int code) throws Exception {
+		return programRepository.deleteProgram(code);
+	}
 }
