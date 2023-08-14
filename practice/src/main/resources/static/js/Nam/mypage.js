@@ -4,7 +4,9 @@ window.addEventListener('load', function() {
 	var usermodifyForm = document.querySelector(".usermodify-form");
 	var userdropForm = document.querySelector(".userdrop-form");
 	var userdropMain = document.querySelector(".userdrop-main");
+	const orderSige = document.querySelector(".order-sige")
 	var wrap = document.querySelector("#wrap");
+/*	orderSige.style.display = 'none';*/
     usermodifyForm.style.display = 'none';
     userdropForm.style.display = 'none';
     wrap.style.position = 'absolute';

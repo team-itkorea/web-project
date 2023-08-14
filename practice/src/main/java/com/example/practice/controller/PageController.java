@@ -48,15 +48,9 @@ public class PageController {
 	public String admin() {
 		return "Nam/admin";
 	}
-	
-	@GetMapping("/admin/contact-{category}")
-	public String adminContact() {
-		return "Nam/admin-contact";
-	}
-	
-	@GetMapping("/admin/contact/check-{contactCode}")
-	public String admincheck() {
-		return "koo/admin-contact-check";
+	@GetMapping("/admin/userlist")
+	public String adminuser() {
+		return "Nam/admin-nonuser";
 	}
 
 	@GetMapping("/auth/signin")
@@ -86,6 +80,11 @@ public class PageController {
    @GetMapping("/board/notice")
    public String boardNotice() {
 	   return "Nam/notice";
+   }
+   
+   @GetMapping("/auth/agreement")
+   public String agreement() {
+	   return "Lim/agreement";
    }
    
 	

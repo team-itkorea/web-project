@@ -34,12 +34,13 @@
         
         <section id="section">
             <div class="section-info">
-                <p class="click-bar" >주문조회</p>
-                <p class="click-bar" style="width: 90px;">위시 리스트</p>
-                <p class="click-bar">취소 조회</p>
-                <p class="click-bar">1:1 문의</p>
+                <p class="click-bar1" >주문조회</p>
+                <p class="click-bar2" style="width: 90px;">위시 리스트</p>
+                <p class="click-bar3 ">취소 조회</p>
+<!--                 <p class="click-bar">1:1 문의</p> -->
                 <p class="user-modify click-bar">정보 수정</p>
                 <p class="user-drop-click click-bar">회원탈퇴</p>
+                
             </div>
             <div class="login-info">
                 <div class="profile">
@@ -49,11 +50,71 @@
                         <p>누적 구매금액: ${program_price}원</p>
                     </div>
                 </div>
-                <div class="info">
-                    <h5>주문조회</h5>
-                </div>
+                
+	                <div class="info">
+	                    <h5>주문조회</h5>
+	                </div>
+	                <div class="order-title-list">
+	                	<div class="order-sige" id="orders">
+				        	<div class="content">
+					            <div class="img-section">
+									<img src="/static/upload/program/${program.fileName}" alt="Image">
+								</div>
+								<div class="txt-section">
+									<h3 class="program-name"> ${program.title}</h3>
+								</div>
+					        </div> 
+			       		</div>
+	                </div>
+	               
+	                
+	                
+                
+	       		 <!-- <div class="order-sige" id="orders">
+		        	<div class="content">
+			            <div class="img-section">
+							<img src="/static/upload/program/${program.fileName}" alt="Image">
+						</div>
+						<div class="txt-section">
+							<h3 class="program-name">주문 제목: ${program.title}</h3>
+						</div>
+			        </div>
+	       		</div>   -->
+	       		<!-- <div class="order-sige" id="orders">
+		        	<div class="content">
+			            <div class="img-section">
+							<img src="/static/upload/program/${program.fileName}" alt="Image">
+						</div>
+						<div class="txt-section">
+							<h3 class="program-name">[${program.theme}] ${program.title}</h3>
+						</div>
+			        </div>
+	       		</div>
+	       		<div class="order-sige" id="orders">
+		        	<div class="content">
+			            <div class="img-section">
+							<img src="/static/upload/program/${program.fileName}" alt="Image">
+						</div>
+						<div class="txt-section">
+							<h3 class="program-name">[${program.theme}] ${program.title}</h3>
+						</div>
+			        </div>
+	       		</div>
+	       		<div class="order-sige" id="orders">
+		        	<div class="content">
+			            <div class="img-section">
+							<img src="/static/upload/program/${program.fileName}" alt="Image">
+						</div>
+						<div class="txt-section">
+							<h3 class="program-name">[${program.theme}] ${program.title}</h3>
+						</div>
+			        </div>
+	       		</div> -->
+	       		 
+                
             </div>
         </section>
+        
 
         <!-- 하단부분 -->
         <footer id="footer">
@@ -163,5 +224,5 @@
     </div>
     
 </body>
-
+<script type="text/javascript" src="/static/js/Lim/mypageOrderList.js"></script>
 </html>

@@ -1,0 +1,185 @@
+/* 회원정보 수정 모달창 */
+.usermodify-form {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1400px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-main {
+    position: absolute;
+    left: 40%;
+    top: 5%;
+    width: 370px;
+    height: 900px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.modal-main i {
+    position: absolute;
+    right: 15px;
+    top: 23px;
+    cursor: pointer;
+}
+
+.modal-main h5 {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'NanumSquareRound';
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+.section {
+    margin: 0 auto;
+    text-align: center;
+    width: 330px;
+    height: 900px;
+    padding: 20px 0;
+}
+
+.email-form {
+    width: 330px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+}
+
+.user-name-form {
+    width: 330px;
+    height: 100px;
+    padding-top: 30px ;
+}
+
+.user-gender-form {
+    width: 330px;
+    height: 100px;
+}
+
+.input p {
+    float: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.input {
+    width: 330px;
+    height: 15px;
+}
+
+.name-form {
+    width: 330px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+}
+
+.gender-select {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+}
+
+.man {
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.woman {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.radio-man {
+    width: 20px;
+    height: 20px;
+}
+
+.radio-woman {
+    width: 20px;
+    height: 20px;
+}
+
+.user-phone-form {
+    width: 330px;
+    height: 100px;
+    padding-top: 30px ;
+}
+
+.phone-form {
+    width: 330px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+}
+
+.user-address-form {
+    width: 330px;
+    height: 100px;
+    padding-top: 10px ;
+}
+
+.address-form {
+    width: 330px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+}
+.user-birth-form {
+    width: 330px;
+    height: 30px;
+    margin-top: 50px;
+}
+
+.birth-info {
+    display: flex;
+    width: 330px;
+    height: 100px;
+}
+
+select.box {
+    width: 107px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    padding: 5px 0 5px 10px;
+    border: 1px solid #d9d6d6;
+    color: #383838;
+    background-color: #ffffff;
+    font-family: 'Montserrat', 'Pretendard', sans-serif;
+}
+
+select.box:nth-child(1) {
+    margin-left: 0px;
+}
+
+.confirm-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: 50px;
+    border: 1px solid #000;
+    margin-top: 60px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.confirm-button:hover {
+    background-color: #000;
+}
+
+.confirm-button p {
+    font-size: 14px;
+}
+
+.confirm-button:hover p {
+    color: #fff;
+}
