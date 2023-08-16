@@ -4,29 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
-    <link rel="stylesheet" href="/static/css/Kim/program-detail.css">
-    <link rel="stylesheet" href="/static/css/Kim/select-option.css">
+    <link rel="stylesheet" href="/static/css/Kim/programDetail.css">
+    <link rel="stylesheet" href="/static/css/Kim/selectOption.css">
     <link rel="stylesheet" href="/static/css/Kim/footer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/0894ad155a.js" crossorigin="anonymous"></script>
-    <script th:inline="javascript">
-        const code = JSON.parse('[[${program.program_code}]]')
-        const options = JSON.parse('[[${program.program_option}]]')
-        const optionArray = options.split(',')
-        
-        console.log("code : " + code)
-        for (const option of optionArray) {
-            console.log("option : " + option)
-        }
-        
-        function like() {
-			$.ajax({
-				type: "POST",
-				url: "api/insert"
-				
-			})
-		}
-        
-    </script>
+    <script src="/static/js/Kim/programDetail.js"></script>
     <style>
         .header-title-state p {
             display: inline; /* 해당 클래스 안의 p 태그를 인라인 요소로 변경 */
@@ -45,7 +28,7 @@
                 <div><a href="#">WELLNESS ITEM</a></div>
                 <div><a href="#">CONTACT</a></div>
             </nav>
-            <div class="logo"><img src="/static/images/logo.png"></div>
+            <div class="logo"><img src="/static/img/logo.png"></div>
             <nav class="login">
                 <p>로그인</p>
                 <p>마이페이지</p>
@@ -60,17 +43,17 @@
 
         <div class="summary">
             <div class="summary-img">
-                <img src="/static/images/project-l/1.png">
+                <!-- <img src="/static/images/project-l/1.png"> -->
             </div>
 
             <div class="summary-item">
                 <div class="item-header">
                     <div class="header-title-state">
-                        <p th:text="${program.program_theme}" th:class="program-theme"></p>
-                        <p th:text="${program.program_title}" th:class="program-title"></p>
+                        <!-- <p class="program-theme">111</p>
+                        <p class="program-title">111</p> -->
                     </div>
                     <div class="header-price-share">
-                        <p class="program-price">15,000원</h2>
+                        <!-- <p class="program-price">15,000원</h2> -->
                     </div>
                     <hr style="color: grey;">
                 </div>
@@ -108,13 +91,16 @@
                         <label for="option">선택 *</label>
                         <select name="option" class="option">
                           <option value="none">선택 (필수)</option>
-                          <option value="option1">3월 12일 (일) 오후 2시 30분(품절)</option>
+                          <!-- <option value="option1">3월 12일 (일) 오후 2시 30분(품절)</option>
                           <option value="option2">3월 19일 (일) 오후 2시 30분(품절)</option>
-                          <option value="option3">3월 26일 (일) 오후 2시 30분(품절)</option>
+                          <option value="option3">3월 26일 (일) 오후 2시 30분(품절)</option> -->
                         </select>
                         <div class="submit-buttons">
-                            <button type="submit" class="buy">구매</button>
-                            <button type="submit" class="program-like">좋아요</button>
+                            <button type="submit" class="buy" value="구매"></button>
+                            <button type="submit" class="like" value="">
+                                <img src="/static/img/program/1.png" alt="">
+                                <p>6</p>
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -125,14 +111,15 @@
 
         <div class="long">
             <div class="three-button">
-                <button type="button">상세정보</button>
+                <button type="button" onclick="scrollToSection('#destination')">상세정보</button>
                 <button type="button">구매평</button>
                 <button type="button">Q&A</button>
             </div>
     
-            <div class="detail">
-                <div class="big-img"></div>
-    
+            <div class="detail" id="destination">
+                <div class="big-img">
+                    <!-- <img src="/static/img/program/L/detail/1.png" alt="Image"> -->
+                </div>
             </div>
 
             <div class="blank"></div>
@@ -173,7 +160,9 @@
     </main>
 
     <footer id="footer">
-        <div class="background-img"><img src="/static/images/footer.png"></div>
+        <div class="background-img"><img src="/static/img/footer.png"></div>
     </footer>
+
+
 </body>
 </html>

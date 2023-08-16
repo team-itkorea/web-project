@@ -11,17 +11,18 @@ function getProgramData() {
 	formData.append("option", option)
 
 	$.ajax({
-		async: false,
 		type: "POST",
-		url: "/admin/add/submit",
+		url: "/admin/api/newProgram",
 		data: formData,
+		cache: false,
 		processData: false,
 		contentType: false,
 		success: (response) => {
-			alert("추가 완료")
+			alert("추가 성공. Admin 메인페이지로 이동합니다.")
+			location.href = "/admin"
 		},
 		error: (error) => {
-			alert("추가 실패")
+			alert("추가 실패. 다시 확인하세요.")
 		}
 	});
 }

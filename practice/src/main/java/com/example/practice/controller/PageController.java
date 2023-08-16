@@ -10,7 +10,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 //import com.example.practice.auth.PrincipalDetailsService;
@@ -52,6 +54,41 @@ public class PageController {
 	public String adminuser() {
 		return "Nam/admin-nonuser";
 	}
+	
+   @GetMapping("/admin/contact-{category}")
+   public String adminContact() {
+      return "Nam/admin-contact";
+   }
+   @GetMapping("/admin/contact/check-{contactCode}")
+   public String admincheck() {
+      return "koo/admin-contact-check";
+   }
+   @GetMapping("/admin/program-{theme}")
+   public String programList() {
+      return "Kim/adminprogramList";
+   }
+   
+   @GetMapping("/admin/program/add")
+   public String programAddForm() {
+      return "Kim/adminprogramAdd";
+   }
+   
+   @GetMapping("/admin/program-{theme}/modify")
+   public String programModify(@PathVariable String theme, @RequestParam int code) {
+      return "Kim/adminprogramModify";
+   }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@GetMapping("/auth/signin")
    public String loginForm() {
@@ -77,14 +114,15 @@ public class PageController {
 	   return "Nam/boardwrite";
    }
    
-   @GetMapping("/board/notice")
-   public String boardNotice() {
-	   return "Nam/notice";
-   }
-   
    @GetMapping("/auth/agreement")
    public String agreement() {
 	   return "Lim/agreement";
+   }
+   
+   @GetMapping("/board/notice")
+   public String boardNotice(@RequestParam (name = "page", defaultValue="1") int page) {
+	   System.out.println("page 확인" + page);
+	   return "Nam/board";
    }
    
 	

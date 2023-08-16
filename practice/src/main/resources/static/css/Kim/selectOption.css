@@ -39,11 +39,25 @@ select:focus {
 .buy, .like {
     height: 50px;
     background-color: white;
+    color: black;
     border: 1px solid rgb(177, 177, 177);
     border-radius: 40px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.buy:hover, .like:hover {
+    border-color: rgb(0, 0, 0)
 }
 
 
 .buy { width: 67%;}
 .like { flex: 1; margin-left: 10px;}
+
+.like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
 

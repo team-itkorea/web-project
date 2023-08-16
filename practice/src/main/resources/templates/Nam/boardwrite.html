@@ -10,19 +10,23 @@
 </head>
 
 <body>
-    <div class=header>
-		<h3>Q&A</h3>
-		<div class="button-area">
-			<button type="button">취소</button>
+	<div id="wrap">
+	    <div class=header>
+			<h3>Q&A</h3>
+			<div class="button-area">
+				<button type="button">취소</button>
+				<button type="button" onclick="getData()">작성</button>
+			</div>
+		</div>
+		<div class="layout">
+			<div>
+				<input name="boardTitle" type="text" placeholder="제목" class="titletext">
+				<div class="bar"></div>
+				<textarea name="boardContent" id="ir1" placeholder="내용을 입력해주세요" class="textarea"></textarea>
+			</div>
 		</div>
 	</div>
-	<div class="layout">
-		<div>
-			<input name="boardTitle" type="text" placeholder="제목" class="titletext">
-			<textarea name="boardContent" class="textarea"></textarea>
-			<button type="button" onclick="getData()">작성</button>
-		</div>
-	</div>
+	
     <script src="../../static/js/Nam/board.js"></script>
 </body>
 </html>

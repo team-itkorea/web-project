@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
+
 <mapper namespace="com.example.practice.user.NoticeRepository">
 	<insert id="saveNotice" parameterType="com.example.practice.user.Notice">
 	insert into
@@ -17,99 +17,38 @@
 	);
 	</insert>
 	
-	<select id="getNotice" parameterType="hashmap" 
-	resultType="com.example.practice.user.Notice">
-	SELECT
-		nm.notice_code,
-		nm.notice_title,
-		nm.user_code,
-		
-		um.user_name,
-		
-		nm.notice_content,
-		nm.create_date
-	FROM
-		notice_mst nm
-		LEFT OUTER JOIN user um ON(um.user_code = nm.user_code)
-	where
-	<choose>
-		<when test='flag == null'>
-			nm.notice_code = #{notice_code}
-		</when>
-		
-		<when test='flag.equals("pre")'>
-			nm.notice_code = (
-				select
-					max(notice_code)
-				from
-					notice_mst
-				where
-					notice_code &lt; #{notice_code}
-			)			
-		</when>
-		<otherwise>
-			nm.notice_code = (
-				select
-					min(notice_code)
-				from
-					notice_mst
-				where
-					notice_code &gt; #{notice_code}
-			)	
-		</otherwise>
-	</choose>
-	
-	</select>
-	
-	<select id="getNoticeList" parameterType="hashmap" resultType="com.example.practice.user.Notice">
-		select
-			nm.notice_code,
-			nm.notice_title,
-			um.user_name,
-			nm.create_date,
-			nm.notice_count,
-			(select
-				count(*)
-			from
-				notice_mst nm
-				left outer join user um on(um.user_code = nm.user_code)
-			<choose>
-				<when test='search_flag == "title"'>
-					where
-						nm.notice_title like concat('%', #{search_value}, '%')
-				</when>
-				<when test='search_flag == "titleAndContent"'>
-					where
-						nm.notice_title like concat('%', #{search_value}, '%')
-						or nm.notice_content like concat('%', #{search_value}, '%')
-				</when>
-				<when test='search_flag == "writer"'>
-					where
-						um.user_id like concat('%', #{search_value}, '%')
-				</when>
-			</choose>
-			) as total_notice_count
+	<select id="getNoticeList" parameterType="Integer" resultType="com.example.practice.user.Notice">
+	select
+		n.notice_code,
+		n.notice_title,
+		u.user_code,
+		n.notice_content,
+		u.user_name,
+		n.create_date
+	from
+		notice n
+		left outer join user u on(u.user_code = n.user_code)
+	order by
+		n.notice_code desc
+	limit
+		#{index}, 10
+   </select>
+   
+   <update id="findNoticeCode" parameterType="com.example.practice.user.Notice">
+		UPDATE
+			notice
+		SET
+			notice_title = #{notice_title},
+			notice_content = #{notice_content}
+		WHERE
+			notice_code = #{notice_code};
+   </update>
+   
+   	<delete id="remove" parameterType="Integer">
+		delete
 		from
-			notice_mst nm
-			left outer join user um on(um.user_code = nm.user_code)
-		<choose>
-			<when test='search_flag == "title"'>
-				where
-					nm.notice_title like concat('%', #{search_value}, '%')
-			</when>
-			<when test='search_flag == "titleAndContent"'>
-				where
-					nm.notice_title like concat('%', #{search_value}, '%')
-					or nm.notice_content like concat('%', #{search_value}, '%')
-			</when>
-			<when test='search_flag == "writer"'>
-				where
-					um.user_name like concat('%', #{search_value}, '%')
-			</when>
-			</choose>
-		order by
-			nm.notice_code desc
-		limit #{index}, 10;
-	</select>
-
+			notice
+		where
+			notice_code = #{notice_code}
+	</delete>
 </mapper>

@@ -10,7 +10,9 @@ public interface NoticeRepository {
 	
 	public int saveNotice(Notice notice) throws Exception;
 	
-	public List<Notice> getNotice(Map<String, Object> map) throws Exception;
+	public List<Notice> getNoticeList(int index) throws Exception;
 	
-	public List<Notice> getNoticeList(Map<String, Object> map) throws Exception;
+	public int remove(int noticeCode) throws Exception;
+	
+	public Notice findNoticeCode(int noticeCode) throws Exception;
 }

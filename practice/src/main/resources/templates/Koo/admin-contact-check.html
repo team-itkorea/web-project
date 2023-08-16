@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어드민 관리 페이지</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/Koo/admincontact.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
+    <script src="/static/js/Nam/admin.js"></script>
+    <script src="/static/js/koo/contact.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="category">
+            <div class="logo">
+                <img src="/static/img/logo02.png" alt=""/>
+            </div>
+            <section class="navi-box">
+				<ul>
+                    <li>유저관리</li>
+                    <ul class="sub">
+                        <li><button type="button" onclick="goUserList()">사용자 관리</button></li>
+                    </ul>
+                    <li>프로그램관리</li>
+                    <ul class="sub">
+                        <li><button type="button" onclick="goProgramList('l')">레저</button></li>
+                        <li><button type="button" onclick="goProgramList('w')">웰니스</button></li>
+                    </ul>
+                    <li>문의관리</li>
+                    <ul class="sub">
+                        <li><a href="/templates/Nam/admin-contact.html">상품 문의</a></li>
+                    </ul>
+                    <li>비회원 관리</li>
+                    <ul class="sub">
+                        <li><button type="button" onclick="a(1)">프로그램 문의</button></li>
+                        <li><button type="button" onclick="a(2)">입점 문의</button></li>
+                        <li><button type="button" onclick="a(3)">협업 문의</button></li>
+                        <li><button type="button" onclick="a(4)">기업 및 단체 문의</button></li>
+                        <li><button type="button" onclick="a(5)">파트너쉽 문의</button></li>
+                        <li><button type="button" onclick="a(6)">기타 문의</button></li>
+                    </ul>
+                </ul>
+            </section>      
+        </div>
+        <div class="header">
+            <h2>비회원 문의</h2>
+        </div>
+          
+        <section class="notice">
+            <!-- board list area -->
+            <div id="board-list">
+                <div class="container">
+                    <table class="board-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="th-num">파트너십 문의</th>
+                                <th scope="col" class="th-title">기타</th>
+                                <th scope="col" class="th-date">rnalsrms0908@naver.com</th>
+                                <th scope="col" class="th-phone">1</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="board-table-table">test</div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+</body>
+</html>

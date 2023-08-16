@@ -1,82 +1,107 @@
-const submitButton = document.querySelector('.notice-button1');
+const text = document.querySelector(".textarea"); // 내용
+const Irl = document.getElementById('ir1'); // 제목
+let page = 1;
+load();
 
-submitButton.addEventListener('click', () => {
-	const noticetitle = document.querySelector('.notice-title').value;
-	console.log(noticetitle);
-    const text = document.getElementById('ir1').value;
-    
-    // 서버로 전송할 데이터를 구성합니다.
-    const dataToSend = {
-        noticeTitle: noticetitle,
-        ir1: text,
-    };
-    
+function getData() {
+			
+	let noticeTitle = text.value;
+	let ir1 = Irl.value;
+	
+	let contentDate = {
+		noticeTitle,
+		ir1
+	}
+				
+	$.ajax ({
+		async: false,
+		type:"post",
+		url: "/notice/write",
+		contentType: "application/json",
+		data : JSON.stringify(contentDate),
+		success: (response) => {
+			console.log(response)
+			alert(response + "성공")
+			location.href = '/notice/main';
+		},
+		error : (error) => {
+			console.log(contentDate + "요청실패");
+		}
+	});
+}
+
+function load() {
     $.ajax({
-        type: 'post',
-        url: '/notice/write',
-        contentType: "application/json",
-        /* dataType: 'json', */
-        data: JSON.stringify(dataToSend),
+        type: "GET",
+        url: `/notice/main/noticelist/${page}`,
+		dataType: "json", 
         success: (response) => {
-            console.log(response.data);
-            alert("등록완료");
-            location.href = '/notice/main';
+            getNoticeList(response.data);
+            console.log(response);
         },
         error: (error) => {
-            console.log("요청 실패");
-            console.log(error);
-            console.log(dataToSend);
+            console.log('Error:', error);
         }
-    }); 
-});
-
-
-
-
-
-
-/*const submitButton = document.querySelector(".submit");
-
-submitButton.onclick = () => {
-    oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
-    const textarearValue = document.querySelector("#ir1").value;
-    alert(textarearValue);
-    
-    let formData = new FormData(document.querySelector("form"));
-    
-    formData.append("userCode", getUser().user_code);
-    
-    formData.forEach((v, k) => {
-		console.log("key: " + k);
-		console.log("value: " + v);
-	})
+    });
 	
-	
-	
-	$.ajax({
-		async: false,
-		type: "post",
-		url: "/notice/write",
-		enctype: "multipart/form-data",
-		contentType: false,
-		processData: false,
-		data: formData,
-		dataType: "json",
-		success: (response) => {
-			alert(response.data + "번 공지사항 작성완료")
-			location.href = "/notice/detail/" + response.data;
-		},
-		error: (error) => {
-			console.log(error);
-		}
-	})
-    
+}
+/*
+function updateData() {
+    $.ajax({
+        type: "GET",
+        url: `/notice/list/findNotice/${noticeCode}`,
+		dataType: "json", 
+        success: (response) => {
+            updateNotice(response.data);
+            console.log(response);
+        },
+        error: (error) => {
+            console.log('Error:', error);
+        }
+    });
 }
 */
 
+function getNoticeList(data) {
+	const tbody = document.querySelector(".notice-listlis")
+	tbody.innerHTML = ''
+	data.forEach(content => {
+		tbody.innerHTML += `
+		<tbody>
+            <tr>
+                <td class="notice-num">${content.noticeCode}</td>
+                <td class="notice-title">${content.noticeTitle}</td>
+                <td class="username">${content.username}</td>
+                <td class="notice-date">${content.createDate.substring(0,10)}</td>
+                <td><i class="fa-regular fa-trash-can" data-content=${content.noticeCode}></i></td>
+                <td><button type="button" onclick="noticeUpdate(${content.noticeCode})"><i class="fa-regular fa-pen-to-square"></i></button></td>
+            </tr>
+        </tbody>
+		`
+		})
 
+	$(".notice-listlis").on("click",".fa-regular.fa-trash-can", function() {
+      var noticeCode = $(this).data("content");
+      console.log(noticeCode);
+      
+	      $.ajax({
+			async: false,
+	        type: "delete",
+	        url: `/notice/noticeDelete/${noticeCode}`,
+			dataType: "json", 
+	        success: (response) => {
+	            console.log(response);
+	            console.log(noticeCode)
+	            location.reload();
+	        },
+	        error: (error) => {
+	            console.log('Error:', error);
+	        }
+	    })
+	})
+}
 
-
-
-
-
+function noticeUpdate(code) {
+	window.alert("이동합니다")
+	location.href = "/notice/update?code=" + code
+}

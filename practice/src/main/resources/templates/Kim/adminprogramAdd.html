@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어드민 관리 페이지</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/nam/admin.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/Kim/adminprogramModify.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/21e161ac95.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/js/Kim/adminProgramAdd.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="category">
+            <div class="logo">
+                <img src="/static/img/logo02.png" alt=""/>
+            </div>
+            <section class="navi-box">
+                <ul>
+                    <li>유저관리</li>
+                    <ul class="sub">
+                        <li><button type="button" onclick="goUserList()">사용자 관리</button></li>
+                    </ul>
+                    <li>프로그램관리</li>
+                    <ul class="sub">
+                        <li><button type="button" onclick="goProgramList('l')">레저</button></li>
+                        <li><button type="button" onclick="goProgramList('w')">웰니스</button></li>
+                    </ul>
+                    <li>문의관리</li>
+                    <ul class="sub">
+                        <li><a href="/templates/Nam/admin-contact.html">상품 문의</a></li>
+                    </ul>
+                    <li>비회원 관리</li>
+                    <ul class="sub">
+                        <li><button type="button" onclick="a(1)">프로그램 문의</button></li>
+                        <li><button type="button" onclick="a(2)">입점 문의</button></li>
+                        <li><button type="button" onclick="a(3)">협업 문의</button></li>
+                        <li><button type="button" onclick="a(4)">기업 및 단체 문의</button></li>
+                        <li><button type="button" onclick="a(5)">파트너쉽 문의</button></li>
+                        <li><button type="button" onclick="a(6)">기타 문의</button></li>
+                    </ul>
+                </ul>
+            </section>      
+        </div>
+        <div class="header">
+            <h2>프로그램 추가</h2>
+            <!-- <button type="button">글쓰기</button> -->
+        </div>
+          
+        <section class="notice">
+			<form enctype="multipart/form-data">
+                <div id="board-list">
+                    <div class="container">
+                        <table class="board-table">
+                            <tbody class="contents">
+                                <tr>
+                                    <th>테마</td>
+                                    <td>
+                                        <select name="theme">
+                                            <option value="none">선택(필수)</option>
+                                            <option value="leisure">일상 탐험</option>
+                                            <option value="wellness">웰니스 클럽</option>
+                                        </select>
+                                    </td>
+                                    <th>옵션</td>
+                                    <td><input name="intext"></input></td>
+                                </tr>
+                                <tr>
+                                    <th>제목</td>
+                                    <td class="a"><input type="text" name="title"></td>
+                                    <td colspan="2" rowspan="9">
+                                        <div name="input">
+                                            <button id="btn1" type="button" onclick="back_Add()">추가</button>
+                                            <button id="btn2" type="button" onclick="front_Add()">삽입</button>
+                                            <button id="btn3" type="button" onclick="Reset()">초기화</button>
+                                            <button id="btn4" type="button" onclick="delete_First()">첫번째 옵션 삭제</button>
+                                            <button id="btn5" type="button" onclick="delete_Final()">마지막 옵션 삭제</button>
+                                        </div>
+                                        <div name="out">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>가격</td>
+                                    <td><input type="text" name="price" placeholder="(원)"></td>
+                                </tr>
+                                <tr>
+                                    <th>내용</td>
+                                    <td><textarea name="info" placeholder="내용을 입력하세요." rows="10" cols="60" style="resize: none;"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <th>장소</td>
+                                    <td><input type="text" name="place"></td>
+                                </tr>
+                                <tr>
+                                    <th>일정</td>
+                                    <td><input type="text" name="schedule"></td>
+                                </tr>
+                                <tr>
+                                    <th>시간</td>
+                                    <td><input type="text" name="time"></td>
+                                </tr>
+                                <tr>
+                                    <th>인원</td>
+                                    <td><input type="text" name="participants"></td>
+                                </tr>
+                                <tr>
+                                    <th>대표 이미지</td>
+                                    <td><input type="file" name="imgUrl_1" class="a"></td>
+                                </tr>
+                                <tr>
+                                    <th>상세 이미지</td>
+                                    <td><input type="file" name="imgUrl_2" class="b"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </form>
+            <button type="button" class="end" onclick="getProgramData()">등록하기</button>
+        </section>
+    </div>
+</body>
+</html>

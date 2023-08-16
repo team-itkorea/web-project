@@ -1,10 +1,11 @@
 let programTheme = location.pathname.substring(location.pathname.lastIndexOf("/") + 1)
 
 load("/api/program/")
+console.log(programTheme)
 
 function load(uri) {
 	$.ajax({
-		type: "POST",
+		type: "GET",
 		url: uri + programTheme,
 		dataType: "json",
 		success: (response) => {
@@ -24,7 +25,7 @@ function getProgram(list) {
 		tbody.innerHTML += `
 			<div class="content">
 	            <div class="img-section">
-					<img src="/static/upload/program/${program.fileName}" onclick="getDetail('${program.theme}', '${program.code}')" alt="Image">
+					<img src="/static/upload/program/${program.fileName}" onclick="getDetail('${programTheme}', '${program.code}')" alt="Image">
 				</div>
 				<div class="txt-section">
 					<h3 class="program-name">[${program.theme}] ${program.title}</h3>
@@ -34,6 +35,6 @@ function getProgram(list) {
 	})
 }
 
-function getDetail(theme, code) {
-	window.location.href = "/program/" + theme + "/detail?code=" + code;
+function getDetail(programTheme, code) {
+	window.location.href = "/program/" + programTheme + "/detail?code=" + code;
 }

@@ -18,7 +18,7 @@
 	  		#{program_time},
 	  		#{program_participants},
 	  		#{program_option},
-	  		#{program_like},
+	  		#{program_heart},
 			#{program_imgUrl_1},
 			#{program_imgUrl_2},
 	  		now(),
@@ -26,12 +26,37 @@
 	  	)
 	</insert>
 	
+	<update id="updateProgram" parameterType="com.example.practice.program.Program">
+		UPDATE
+			program
+		SET
+			program_title = #{program_title},
+	  		program_price = #{program_price},
+	  		program_info = #{program_info},
+	  		program_place = #{program_place},
+	  		program_schedule = #{program_schedule},
+	  		program_time = #{program_time},
+	  		program_participants = #{program_participants},
+	  		program_option = #{program_option}
+		WHERE
+			program_code = #{program_code}
+	</update>
+	
+	<delete id="deleteProgram" parameterType="Integer">
+		DELETE
+		FROM
+			program
+		WHERE
+			program_code = #{code}
+	</delete>
+	
 	<select id="GetProgramList" parameterType="String" resultType="com.example.practice.program.Program">
 		SELECT
 			program_code,
 			program_theme,
 			program_title,
-			program_imgUrl_1
+			program_imgUrl_1,
+			create_date
 		FROM
 			program
 		WHERE
@@ -46,5 +71,36 @@
 		WHERE
 			program_code = #{code}
 	</select>
+	
+	<update id="addHeart" parameterType="Integer">
+		UPDATE
+			program
+		SET
+			program_heart = program_heart + 1
+		WHERE
+			program_code = #{code}
+	</update>
+	
+	<update id="subHeart" parameterType="Integer">
+		UPDATE
+			program
+		SET
+			program_heart = program_heart - 1
+		WHERE
+			program_code = #{code}
+	</update>
+	
+	<insert id="createOrder" parameterType="hashmap">
+		INSERT INTO
+			order_mst
+		VALUES(
+			0,
+			#{userCode},
+			#{programCode},
+			1,
+			now(),
+			now()
+		)
+	</insert>
 	
 </mapper>

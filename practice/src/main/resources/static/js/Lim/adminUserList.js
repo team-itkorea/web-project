@@ -1,4 +1,5 @@
 window.addEventListener('load', function() {
+/*document.addEventListener("DOMContentLoaded", function() {*/
 	var usermodifyForm = document.querySelector(".usermodify-form");
 	
 	usermodifyForm.style.display = 'none';
