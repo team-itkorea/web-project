@@ -41,10 +41,6 @@ public class PageController {
         return "redirect:/";
     }
 	
-	@GetMapping("/user")
-	public @ResponseBody String user() {
-		return "user";
-	}
 	
 	@GetMapping("/admin")
 	public String admin() {
@@ -57,11 +53,11 @@ public class PageController {
 	
    @GetMapping("/admin/contact-{category}")
    public String adminContact() {
-      return "Nam/admin-contact";
+      return "Koo/admin-contact";
    }
    @GetMapping("/admin/contact/check-{contactCode}")
    public String admincheck() {
-      return "koo/admin-contact-check";
+      return "Koo/admin-contact-check";
    }
    @GetMapping("/admin/program-{theme}")
    public String programList() {
@@ -78,6 +74,32 @@ public class PageController {
       return "Kim/adminprogramModify";
    }
 
+   @GetMapping("/brand")
+   public String goBrand() {
+	   return "Nam/brand";
+   }
+	@GetMapping("/program")
+	public String loadProgramMain() {
+		return "Kim/programMain";
+	}
+	@GetMapping("/wellmate") 
+	public String mate() {
+		return "/Koo/mate";
+	}
+	@GetMapping("/item")
+	public String item() {
+		return "/Koo/item";
+	}
+	
+	@GetMapping("/contact")
+	public String contact() {
+		return "/Koo/contact";
+	}
+	
+	@GetMapping("/notice/main")
+	public String noticemain(@RequestParam (name = "page", defaultValue="1") int page) {
+		return "/Koo/notice-main";
+	}
 	
 	
 	

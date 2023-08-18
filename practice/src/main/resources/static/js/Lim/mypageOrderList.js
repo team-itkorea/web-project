@@ -42,8 +42,10 @@ $(document).ready(function() {
 	                <div class="txt-section">
 	                    <h3 class="program-name">주문 제목: ${order.program_title}</h3>
 	                </div>
+		            <div class="but-section">
+				       <button class="order-button" data-ordercode="${order.order_code}" type="button" value="2">주문취소</button>
+		            </div>
 	            </div>
-	       <button class="order-button" data-ordercode="${order.order_code}" type="button" value="2">주문취소</button>
 	       </div>
             `;
             ordersDiv.append(orderInfo);
@@ -59,7 +61,7 @@ $(document).ready(function() {
 	}
 
     // 주문 취소 버튼 클릭 이벤트 위임
-    $("#orders").on("click", ".order-button", function() {
+    $(".order-title-list").on("click", ".order-button", function() {
         var orderCode = $(this).data("ordercode");
         var flagCode = $(this).val();
         

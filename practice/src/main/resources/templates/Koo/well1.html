@@ -8,26 +8,33 @@
     <link rel="stylesheet" href="/static/css/koo/well1.css">
     <link rel="stylesheet" href="/static/css/koo/main-header.css">
     <link rel="stylesheet" href="/static/css/koo/footer.css">
+    <link rel="stylesheet" href="/static/css/Nam/main.css">
     <script src="https://kit.fontawesome.com/7664657868.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/Lim/main.js"></script>
 </head>
 <body>
     <!-- 헤더 부분 -->
     <header id="header">
         <header class="header-inner">
-            <nav class="nav">
-                <div><a href="#">BRAND</a></div>
-                <div><a href="#">PROGRAM</a></div>
-                <div><a href="#">WELL MATE</a></div>
-                <div><a href="#">WELLNESS ITEM</a></div>
-                <div><a href="#">CONTACT</a></div>
-            </nav>
-            <div class="logo"><a href="/templates/nam/main.html"></a><img src="/static/img/logo.png" alt=""></div>
-            <nav class="login">
-                <p>로그인</p>
-                <p>마이페이지</p>
-                <div class="bar-img"><i class="fa-solid fa-bars"></i></div>
-            </nav>
-        </header>
+                <nav class="nav">
+                    <div><a href="/brand">BRAND</a></div>
+                    <div><a href="/program">PROGRAM</a></div>
+                    <div><a href="/wellmate">WELL MATE</a></div>
+                    <div><a href="/item">WELLNESS ITEM</a></div>
+                </nav>
+                <div class="logo"><a href="/"><img src="/static/img/logo.png" alt=""></a></div>
+                <nav class="nav1">
+                	<div><a href="/contact">CONTACT</a></div>
+					<div><a href="/board/notice">자유게시판</a></div>
+					<div><a href="/notice/main">공지사항</a></div>
+                </nav>
+                <nav class="login">
+                    <p><a href="/auth/signin">로그인</a></p>
+                    <p><a href="/auth/signup">회원가입</a></p>
+                    <div class="bar-img"><i class="fa-solid fa-bars"></i></div>
+                </nav>
+            </header>
     </header>
     <!-- body -->
     <section>

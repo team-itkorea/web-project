@@ -39,7 +39,7 @@
 
 #header .nav {
     display: flex;
-    width: 600px;
+    width: 550px;
     font-size: 17px;
     color: #555;
     
@@ -69,24 +69,62 @@
     color: #555;
 }
 
+/* 왼쪽 */
+#header .nav1 {
+    display: flex;
+    width: 600px;
+    font-size: 17px;
+    color: #555;
+    
+}
+
+#header .nav1 div {
+    width: 100px;
+    margin-right: 20px;
+    font-family: 'NanumSquareRound';
+
+}
+
+#header .nav1 div:nth-child(1) {
+	padding-left: 300px;
+    width: 70px;
+    text-align: center;
+}
+
+#header .nav1 div:nth-child(2) {
+    width: 80px;
+    text-align: center;
+}
+
+#header .nav1 div:nth-child(3) {
+    width: 70px;
+    text-align: center;
+}
+
+#header .nav1 a {
+    color: #555;
+}
+
 #header .logo {
     width: 135px;
     height: 93px;
     margin-top: 35px;
-    margin-left: -480px;
+    margin-left: 50px;
 }
 
 #header .logo img {
     width: 100%;
+    margin-left: 100px;
 }
 
 #header .login {
-    display: flex;
+    display: flex;	
 }
 
 #header .login  p {
-    font-size: 14px;
-    margin-right: 15px;
+    font-size: 10px;
+/*     margin-right: 10px; */
+    width: 60px;
 }
 
 #header .login a {

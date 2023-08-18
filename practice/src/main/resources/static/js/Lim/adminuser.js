@@ -105,7 +105,7 @@ $(document).ready(function() {
 	    document.getElementById('day').value = day;
 	
 	    return userCode;
-	}
-		})
+		}
+	})
 });
 

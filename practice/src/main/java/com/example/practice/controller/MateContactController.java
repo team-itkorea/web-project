@@ -15,20 +15,10 @@ import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
 public class MateContactController {
-	@GetMapping("/wellmate") 
-	public String mate() {
-		return "/Koo/mate";
-	}
+
 	
-	@GetMapping("/item")
-	public String item() {
-		return "/Koo/item";
-	}
-	
-	@GetMapping("/contact")
-	public String contact() {
-		return "/Koo/contact";
-	}
+
+
 	
 	@GetMapping("/wellmate/1")
 	public String wella() {

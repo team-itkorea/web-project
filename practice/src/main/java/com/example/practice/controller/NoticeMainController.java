@@ -13,10 +13,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class NoticeMainController {
 	
-	@GetMapping("/main")
-	public String noticemain(@RequestParam (name = "page", defaultValue="1") int page) {
-		return "/Koo/notice-main";
-	}
+
 	
 //	admin만 공지 쓸 수 있게할 예정	
 	@GetMapping("/write")

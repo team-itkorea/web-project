@@ -69,24 +69,67 @@
     color: #555;
 }
 
+/* 왼쪽 */
+#header .nav1 {
+    display: flex;
+    width: 600px;
+    font-size: 17px;
+    color: #555;
+    
+}
+
+#header .nav1 div {
+    width: 100px;
+    margin-right: 20px;
+    font-family: 'NanumSquareRound';
+
+}
+
+#header .nav1 div:nth-child(1) {
+	padding-left: 300px;
+    width: 70px;
+    text-align: center;
+}
+
+#header .nav1 div:nth-child(2) {
+    width: 80px;
+    text-align: center;
+}
+
+#header .nav1 div:nth-child(3) {
+    width: 70px;
+    text-align: center;
+}
+
+#header .nav1 a {
+    color: #555;
+}
+
 #header .logo {
     width: 135px;
     height: 93px;
     margin-top: 35px;
-    margin-left: -480px;
+    margin-left: 50px;
 }
 
 #header .logo img {
     width: 100%;
+    margin-left: 100px;
 }
 
 #header .login {
     display: flex;
 }
 
-#header .login  p {
+/* #header .login  p {
     font-size: 14px;
     margin-right: 15px;
+}
+ */
+#header .login  p {
+    font-size: 10px;
+/*     margin-right: 10px; */
+    width: 60px;
 }
 
 #header .login a {
@@ -109,7 +152,7 @@
     box-sizing: border-box;
 }
 
-.click-bar {
+.section-info p {
 	width: 70px;
 	height: 20px;
 	margin-bottom: 20px;
@@ -164,6 +207,51 @@
 .info {
     padding: 50px 0;
 }
+
+.order-title-list {
+	width: 1500px;
+}
+
+.order-sige {
+	display: inline-block;
+}
+
+.content {
+	border: 1px solid;
+	background-color: white;
+	width: 350px;
+	height: 300px;
+    display: inline-block;
+}
+
+.img-section {
+	width: 350px;
+	height: 280px;
+}
+
+.img-section img {
+	width: 100%;
+	height: 100%; 
+}
+
+.txt-section {
+	width: 100%;
+	height: 35px;
+}
+
+.but-section {
+	width: 100%;
+	height: 35px;
+}
+
+.order-button {
+	border: 1px solid;
+	width: 350px;
+	height: 30px;
+	background-color: white;
+	
+}
+
 
 /* 회원정보 수정 모달창 */
 .usermodify-form {

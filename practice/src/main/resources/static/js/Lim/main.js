@@ -21,7 +21,9 @@ function checkLoginStatus() {
 function showLoggedInUI(user_name) {
     const loginNav = document.querySelector(".login");
     if (loginNav) {
-        loginNav.innerHTML = `<p>${user_name}님</p><p><a href="/auth/user/logout">로그아웃</a></p><p><a href="auth/mypage">마이페이지</a></p>`;
+        loginNav.innerHTML = `
+        <p>${user_name}님</p><p><a href="/auth/user/logout">로그아웃</a></p><p><a href="/auth/mypage">마이페이지</a></p>
+        `;
     }
 }
 

@@ -59,4 +59,8 @@
 			<item value="C:\lch_java_weekend\lch_java_weekend\java\git5"/>
 		</list>
 	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="574"/>
+		<item key="DIALOG_Y_ORIGIN" value="269"/>
+	</section>
 </section>

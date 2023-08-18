@@ -11,10 +11,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ProgramController {
 	
-	@GetMapping("/program")
-	public String loadProgramMain() {
-		return "Kim/programMain";
-	}
+
 	
 	@GetMapping("/program/leisure")
 	public String loadLeisure() {
